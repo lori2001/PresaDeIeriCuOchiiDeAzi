@@ -1,0 +1,17 @@
+#home{
+  padding-top: 55px; /*for navbar*/
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }

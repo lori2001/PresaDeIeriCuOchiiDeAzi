@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Most used fonts */
+/* font-family: enchantedLand, arialBlack; */
+
+/*Fonts*/
+@font-face {
+    font-family: enchantedLand;
+    src: url(assets/fonts/Enchanted-Land.otf) format("opentype");
+ }
+@font-face {
+   font-family: arialBlack;
+   src: url(assets/fonts/Arial-Black.ttf) format("truetype");
+ }
+
+/*Smooth scrolling*/
+/*Non-Compatible with explorer,edge and safari*/
+/*UPDATE: Not used, however left in for safety*/
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /*edge and explorer white-line bugfix*/
+  body {
+    margin: 0;
+    line-height: 1;
+    background-color: #ebf2fa;
+  }
