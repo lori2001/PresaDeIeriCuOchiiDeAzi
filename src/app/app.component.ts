@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(private translate: TranslateService) {
     translate.addLangs(['hu', 'ro', 'de']);
 
-    translate.setDefaultLang('hu');
-    this.translate.currentLang = 'hu';
+    translate.setDefaultLang('ro');
+    this.translate.currentLang = 'ro';
   }
 }
