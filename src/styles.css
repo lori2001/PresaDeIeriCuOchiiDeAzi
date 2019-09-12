@@ -9,9 +9,21 @@
     src: url(assets/fonts/Enchanted-Land.otf) format("opentype");
  }
 @font-face {
-   font-family: arialBlack;
-   src: url(assets/fonts/Arial-Black.ttf) format("truetype");
+   font-family: Typewriter;
+   src: url(assets/fonts/JMH-Typewriter.ttf) format("truetype");
  }
+ @font-face {
+  font-family: TypewriterBlack;
+  src: url(assets/fonts/JMH-Typewriter-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: TypewriterBold;
+  src: url(assets/fonts/JMH-Typewriter-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: TypewriterThin;
+  src: url(assets/fonts/JMH-Typewriter-Thin.ttf) format("truetype");
+}
 
 /*Smooth scrolling*/
 /*Non-Compatible with explorer,edge and safari*/
@@ -24,5 +36,5 @@ html {
   body {
     margin: 0;
     line-height: 1;
-    background-color: rgb(50, 50, 50); /*#ebf2fa*/
+    background-color: white; /*rgb(255,255,224)*/
   }

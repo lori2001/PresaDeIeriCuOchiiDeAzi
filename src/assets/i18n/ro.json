@@ -1,6 +1,15 @@
 {
     "menu": {
-        "home": "Acasă"
+        "home": "Acasă",
+        "team": "Echipă",
+        "activities": "Activități",
+        "sibiuPress": "Presa Sibiană",
+        "brasovPress": "Presa Brașoveană",
+        "raports": "Rapoarte"
+    },
+
+    "about": {
+        "title": "Despre Project"
     },
 
     "description": "Binomul identitate-alteritate în presa brașoveană și sibiană din a doua parte a secolului al XX-lea - project cofinanțat de AFCN"

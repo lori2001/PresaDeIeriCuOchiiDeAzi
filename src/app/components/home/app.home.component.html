@@ -2,22 +2,14 @@
 <section id="home">
 
     <div class="description">
-        {{ 'description' | translate }}
+        <div class="text">
+            {{ 'description' | translate }}
+        </div>
+        <img class="logo" src="assets/images/logo.png" alt="Website Logo"> 
     </div>
 
-
-        <div class="grid-container">
-            <app-card class="grid-item"></app-card>
-            <app-card class="grid-item"></app-card>
-            <app-card class="grid-item"></app-card>
-            <app-card class="grid-item"></app-card>
-            <app-card class="grid-item"></app-card>
-            <app-card class="grid-item"></app-card>
-            <app-card class="grid-item"></app-card>
-            <app-card class="grid-item"></app-card>
-            <app-card class="grid-item"></app-card>
-            <app-card class="grid-item"></app-card>
-        </div>
-
+    <div class="about">
+        <div class="title">{{ 'about.title' | translate }}</div>
+    </div>
 
 </section>

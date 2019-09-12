@@ -10,7 +10,7 @@
     left: 0;
     z-index: 100;
   
-    min-height: 48px;
+    height: 55px;
     width: 100%;
     background-color: #3D76A8;
     box-shadow: 0px 3px 6px rgb(25,25,25);
@@ -22,8 +22,8 @@
   
 .navbar-nav a{
 /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
-  font-family: enchantedLand, arialBlack; 
-  font-size: 2.1rem;
+  font-family: Typewriter; 
+  font-size: 1.3rem;
   margin-left: 25px;
   margin-right: 25px;
   border: none;
@@ -33,14 +33,15 @@
   text-align: left;
   color: #fff;
 
-  -webkit-transition: color .2s ease-in-out;
-  -moz-transition: color .2s ease-in-out;
-  -o-transition: color .2s ease-in-out;
-  -ms-transition: color .2s ease-in-out;
-  transition: color .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
-.navbar-nav a:hover { 
-  color: #F06000 !important; 
+.navbar-nav a:hover {
+  border-bottom: 3px solid currentColor;
+  color: black !important; 
   cursor:pointer;
 }
 /*hides outline when on focus*/
