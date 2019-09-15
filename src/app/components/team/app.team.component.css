@@ -1,0 +1,20 @@
+#team {
+  overflow: hidden;
+  width: 100%;
+}
+  
+  .member {
+    display: block;
+    width: 70%;
+    height: 400px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 30px;
+  }
+
+  .align-left{
+    float: left;
+  }
+  .align-right{
+    float: right;
+  }

@@ -2,14 +2,28 @@
 <section id="home">
 
     <div class="description">
-        <div class="text">
-            {{ 'description' | translate }}
+        <div class="content" style="background-color: rgb(235,235,235);">
+            <img src="../../../assets/images/gazeta_transilvania.jpg" alt="Gazeta Transilvania">
+            <div class="text">
+               <h1>{{ 'home.description.title' | translate}}</h1>
+               <h2>{{ 'home.description.text' | translate}}</h2>
+               <h3>{{ 'home.description.finance' | translate}}</h3>
+            </div>
         </div>
-        <img class="logo" src="assets/images/logo.png" alt="Website Logo"> 
     </div>
 
     <div class="about">
-        <div class="title">{{ 'about.title' | translate }}</div>
+        <h1 style="background-color: #4380bc; color:white;">{{ 'home.about.title' | translate}}</h1>
+        <div class="text" style="background-color: #b7d6f7;">
+            <h2>{{ 'home.about.subtitle1' | translate}}</h2>
+            <h3>{{ 'home.about.text1' | translate}}</h3>
+        </div>
+        <div class="text"  style="background-color: whitesmoke;">
+            <h2>{{ 'home.about.subtitle2' | translate}}</h2>
+            <h3>{{ 'home.about.text2' | translate}}</h3>
+        </div>
+
     </div>
 
 </section>
+<app-footer></app-footer>

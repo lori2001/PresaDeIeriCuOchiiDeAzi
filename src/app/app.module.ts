@@ -19,6 +19,9 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/app.card.component';
 import { NavbarComponent } from './components/navbar/app.navbar.component';
 import { HomeComponent } from './components/home/app.home.component';
+import { FooterComponent } from './components/footer/app.footer.component';
+import { TeamComponent } from './components/team/app.team.component';
+import { NotFoundComponent } from './components/not-found/app.not-found.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -26,11 +29,20 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 @NgModule({
   declarations: [
+    // main component
     AppComponent,
-    HomeComponent,
-    NavbarComponent,
 
-     CardComponent
+    // page components
+    HomeComponent,
+    TeamComponent,
+
+    // 404 component
+    NotFoundComponent,
+
+    // item components
+    NavbarComponent,
+    FooterComponent,
+    CardComponent
     ],
   imports: [
     BrowserModule,

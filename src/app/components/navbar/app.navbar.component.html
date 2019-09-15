@@ -1,8 +1,12 @@
 <section id="navbar">
     <nav class="navbar navbar-expand-md">
+        <div [routerLink]="['/home']" class="circle-border">
+            <img class="logo" src="assets/images/logo.png" alt="Website Logo"> 
+        </div>
+
         <ul class="navbar-nav mr-auto">
-            <a>{{ 'menu.home' | translate }}</a>
-            <a>{{ 'menu.team' | translate }}</a>
+            <a [routerLink]="['/home']">{{ 'menu.home' | translate }}</a>
+            <a [routerLink]="['/team']">{{ 'menu.team' | translate }}</a>
             <a>{{ 'menu.activities' | translate }}</a>
             <a>{{ 'menu.sibiuPress' | translate }}</a>
             <a>{{ 'menu.brasovPress' | translate }}</a>
