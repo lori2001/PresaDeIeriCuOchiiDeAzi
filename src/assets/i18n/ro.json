@@ -25,6 +25,13 @@
         }
     },
 
+    "team": {
+        "member1": {
+            "name": "Vlad Chiriches",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+        }
+    },
+
     "not-found": {
         "text": "Ne pare rău",
         "subtext": "pagina cerută nu a fost găsită!"

@@ -82,3 +82,7 @@
 .navbar-nav:focus{
   outline: none;
 }
+
+.navbar-nav .is-active{
+  color: orange !important; 
+}

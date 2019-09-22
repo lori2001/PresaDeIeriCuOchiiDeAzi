@@ -5,11 +5,11 @@
         </div>
 
         <ul class="navbar-nav mr-auto">
-            <a [routerLink]="['/home']">{{ 'menu.home' | translate }}</a>
-            <a [routerLink]="['/team']">{{ 'menu.team' | translate }}</a>
+            <a [routerLink]="['/home']" routerLinkActive="is-active">{{ 'menu.home' | translate }}</a>
+            <a [routerLink]="['/team']" routerLinkActive="is-active">{{ 'menu.team' | translate }}</a>
             <a>{{ 'menu.activities' | translate }}</a>
-            <a>{{ 'menu.sibiuPress' | translate }}</a>
-            <a>{{ 'menu.brasovPress' | translate }}</a>
+            <a [routerLink]="['/brasov-press']" routerLinkActive="is-active">{{ 'menu.brasovPress' | translate }}</a>
+            <a [routerLink]="['/sibiu-press']" routerLinkActive="is-active">{{ 'menu.sibiuPress' | translate }}</a>
             <a>{{ 'menu.raports' | translate }}</a>
         </ul>
     </nav>

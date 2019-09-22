@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.home.component.css']
 })
 export class HomeComponent {
-  colour = 'rgb(255,0,0)';
 }
