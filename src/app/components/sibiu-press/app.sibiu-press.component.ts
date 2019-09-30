@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.sibiu-press.component.css']
 })
 export class SibiuPressComponent {
+
+  
+
 }
