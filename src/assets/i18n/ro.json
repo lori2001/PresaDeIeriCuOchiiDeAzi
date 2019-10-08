@@ -26,12 +26,28 @@
     },
 
     "team": {
-        "member1": {
+        "molnar-stefania": {
             "name": "Molnár Stefánia",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
         },
-        "member2": {
+        "molnar-csaba": {
             "name": "Molnár Csaba",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+        },
+        "konya-ecaterina": {
+            "name": "Kónya Ecaterina",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+        },
+        "ambrus-attila": {
+            "name": "Ambrus Attila",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+        },
+        "cornel-maria": {
+            "name": "Cornel-Mihai Maria",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+        },
+        "grancea-mihaela": {
+            "name": "Grancea Mihaela",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
         }
     },
