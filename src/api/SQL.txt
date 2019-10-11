@@ -1,0 +1,20 @@
+// this file contains all SQL commands used
+
+CREATE TABLE news (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    img varchar(255),
+    href varchar(255),
+    description varchar(255),
+    category varchar(255),
+    publish_date DATE,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO `news`(`name`, `href`, `img`, `description`, `category`, `publish_date`) VALUES 
+('CONCORDIA',
+'../../../assets/doc/news/Concordia1857-1866/Concordia 1857 nr 1 scris de mana.jpg',
+'../../../assets/doc/news/Concordia1857-1866/Concordia 1857 nr 1 scris de mana.jpg',
+'Concordia 1857 nr1 manuscris',
+'Sibiu',
+'1857.00.00');

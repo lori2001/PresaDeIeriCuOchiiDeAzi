@@ -1,11 +1,10 @@
-
 <section id="card">
-    <p-card header="Gazeta Transilvania" subheader="Test Header" [style]="{width: '300px'}" styleClass="ui-card-shadow">
-        <p-header>
-            <img src="Card" src="../../../assets/images/placeholder.jpg" class="card_image">
-        </p-header>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-            quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
-      </p-card>
+    <a href="{{newsElement.href}}" >
+        <p-card header="{{newsElement.name}}" subheader="{{newsElement.publish_date}}" [style]="{width: '100%'}" styleClass="ui-card-shadow">
+            <p-header>
+                <img src="Card" src="{{newsElement.img}}" class="card_image">
+            </p-header>
+            <div>{{newsElement.description}}</div>
+        </p-card>
+    </a>
 </section>
-  

@@ -1,42 +1,25 @@
 <app-navbar></app-navbar>
 <section id="sibiu-press" style="background-color: white">
-
-    <div class="button-container">
-        <div class="button-item"><button class="btn" pButton type="button" label="1910"></button></div>
-        <div class="button-item"><button class="btn" pButton type="button" label="1920"></button></div>
-        <div class="button-item"><button class="btn" pButton type="button" label="1900"></button></div>
-        <div class="button-item"><button class="btn" pButton type="button" label="1930"></button></div>
-        <div class="button-item"><button class="btn" pButton type="button" label="1940"></button></div>
-        <div class="button-item"><button class="btn" pButton type="button" label="1950"></button></div>
-        <div class="button-item"><button class="btn" pButton type="button" label="1960"></button></div>
-        <div class="button-item"><button class="btn" pButton type="button" label="1970"></button></div>
-        <div class="button-item"><button class="btn" pButton type="button" label="1980"></button></div>
-        <div class="button-item"><button class="btn" pButton type="button" label="1990"></button></div>
-    </div>
-
-    <h1>1910</h1>
-    <div class="card-container">
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-    </div>
-
     
-    <h1>1920</h1>
-    <div class="card-container">
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
-        <app-card class="card-item"></app-card>
+    <div class="button-container">
+        <div *ngFor="let year of years">
+            <div class="button-item">
+                <a [ngx-scroll-to]="'#' + year.str" [ngx-scroll-to-offset]="-70" >
+                    <button class="btn" pButton type="button" label="{{year.str}}"></button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div *ngFor="let year of years, index as i">
+        <h1 id="{{year.str}}">{{year.str}}</h1>
+        <div class="card-container">
+            <div *ngFor="let item of newsGroup">
+                <div *ngIf="isInYearsIndex(item, i)">
+                    <app-card class="card-item" [newsElement]='item'></app-card>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div style="width: 100%; height: 80px;"></div>

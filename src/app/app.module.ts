@@ -15,6 +15,9 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 // manages which component gets displayed and when
 import { AppRoutingModule } from './app.routes';
 
+// scroling
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/app.card.component';
 import { NavbarComponent } from './components/navbar/app.navbar.component';
@@ -51,6 +54,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
+    // scrolling
+    ScrollToModule.forRoot(),
 
     // routing
     AppRoutingModule,

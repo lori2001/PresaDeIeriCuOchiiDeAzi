@@ -1,5 +1,6 @@
 import { Input } from '@angular/core';
 import { Component } from '@angular/core';
+import { NewsElement } from 'src/app/models/database/news.element';
 
 @Component({
   selector: 'app-card',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.card.component.css']
 })
 export class CardComponent {
-    @Input() image = 'https://via.placeholder.com/500x325';
+    @Input() newsElement: NewsElement = {
+      id: 0 ,
+      name: 'Name',
+      description: 'No Description',
+      img: '../../../assets/images/placeholder.jpg',
+      href: '../../../assets/images/placeholder.jpg',
+      category: 'No Category',
+      publish_date: '2019.10.11'
+    };
 }
 
