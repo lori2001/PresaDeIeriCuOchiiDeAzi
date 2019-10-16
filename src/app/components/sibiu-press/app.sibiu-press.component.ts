@@ -24,11 +24,14 @@ export class SibiuPressComponent implements OnInit {
   }
 
   isInYearsIndex(newsElement: NewsElement, yearsIndex: number ) {
-
     const pubYear = Number(newsElement.publish_date.substring(0, 4));
 
     if (yearsIndex + 1 >= this.years.length) {
-      return true;
+      if(pubYear > this.years[yearsIndex].val) {
+        return true;
+      } else {
+        return false;
+      }
     } else if (pubYear >= this.years[yearsIndex].val && pubYear < this.years[yearsIndex + 1].val) {
       return true;
     } else {
@@ -41,13 +44,13 @@ export class SibiuPressComponent implements OnInit {
       (res: NewsElement[]) => {
         this.newsGroup = res;
 
-        for(let it of this.newsGroup){
-          if(it.noMonth && it.noDay){
-            it.publish_date = it.publish_date.substring(0,4);
+        for (let it of this.newsGroup){
+          if (it.noMonth && it.noDay){
+            it.publish_date = it.publish_date.substring(0, 4);
           } else if(it.noDay) {
-            it.publish_date = it.publish_date.substring(0,7);
+            it.publish_date = it.publish_date.substring(0, 7);
           } else if(it.noMonth) {
-            it.publish_date = it.publish_date.substring(0,4) + '-00-' + it.publish_date.substring(8,10);
+            it.publish_date = it.publish_date.substring(0, 4) + '-00-' + it.publish_date.substring(8, 10);
           }
         }
       },
