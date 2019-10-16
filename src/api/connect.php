@@ -2,16 +2,17 @@
 
 // db credentials
 
-/*
+
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'presa_db');
-*/
+define('DB_NAME', 'presaia_db');
+/*
 define('DB_HOST', 'server52');
 define('DB_USER', 'presaia_1');
 define('DB_PASS', 'n@W0SbqbIOX(');
 define('DB_NAME', 'presaia_db');
+*/
 
 // Connect with the database.
 function connect()

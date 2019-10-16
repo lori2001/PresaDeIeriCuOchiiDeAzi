@@ -30,11 +30,11 @@
 
 .card-container {
   width: 85%;
-  margin: 0 auto;
 
   padding-top: 20px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
+  margin: 0 auto;
 }
 .card-item {
   margin: 0 auto;

@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import {CarouselModule} from 'primeng/carousel';
+import {VirtualScrollerModule} from 'primeng/virtualscroller';
 
 // import ngx-translate and the http loader
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -65,6 +66,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
      ButtonModule,
      CardModule,
      CarouselModule,
+     VirtualScrollerModule,
 
      // translate
      HttpClientModule,

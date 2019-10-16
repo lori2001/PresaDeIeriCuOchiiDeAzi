@@ -15,7 +15,13 @@ export class CardComponent {
       img: '../../../assets/images/placeholder.jpg',
       href: '../../../assets/images/placeholder.jpg',
       category: 'No Category',
-      publish_date: '2019.10.11'
+      language: 'No Language',
+      noDay: true,
+      noMonth: false,
+      page: 0,
+      num: 0,
+      keywords: '0',
+      publish_date: '9999-00-00'
     };
 }
 

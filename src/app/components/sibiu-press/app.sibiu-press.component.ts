@@ -12,18 +12,11 @@ export class SibiuPressComponent implements OnInit {
   newsGroup: NewsElement[];
 
   years: { val: number, str: string }[] = [
-    { 'val': 0, 'str': '<1900' },
-    { 'val': 1900, 'str': '1900' },
-    { 'val': 1910, 'str': '1910' },
-    { 'val': 1920, 'str': '1920' },
-    { 'val': 1930, 'str': '1930' },
-    { 'val': 1940, 'str': '1940' },
-    { 'val': 1950, 'str': '1950' },
-    { 'val': 1960, 'str': '1960' },
-    { 'val': 1970, 'str': '1970' },
-    { 'val': 1980, 'str': '1980' },
-    { 'val': 1990, 'str': '1990' },
-    { 'val': 2000, 'str': '>2000' }
+    { 'val': 1860, 'str': '1860-1870' },
+    { 'val': 1871, 'str': '1871-1880' },
+    { 'val': 1881, 'str': '1881-1890' },
+    { 'val': 1891, 'str': '1891-1900' },
+    { 'val': 1901, 'str': '1901-1919' }
   ];
 
   constructor(private newsService: NewsService) {
@@ -34,9 +27,9 @@ export class SibiuPressComponent implements OnInit {
 
     const pubYear = Number(newsElement.publish_date.substring(0, 4));
 
-    if (yearsIndex >= this.years.length) {
+    if (yearsIndex + 1 >= this.years.length) {
       return true;
-    } else if (pubYear > this.years[yearsIndex].val && pubYear < this.years[yearsIndex + 1].val) {
+    } else if (pubYear >= this.years[yearsIndex].val && pubYear < this.years[yearsIndex + 1].val) {
       return true;
     } else {
       return false;
@@ -47,6 +40,16 @@ export class SibiuPressComponent implements OnInit {
     this.newsService.getNews().subscribe(
       (res: NewsElement[]) => {
         this.newsGroup = res;
+
+        for(let it of this.newsGroup){
+          if(it.noMonth && it.noDay){
+            it.publish_date = it.publish_date.substring(0,4);
+          } else if(it.noDay) {
+            it.publish_date = it.publish_date.substring(0,7);
+          } else if(it.noMonth) {
+            it.publish_date = it.publish_date.substring(0,4) + '-00-' + it.publish_date.substring(8,10);
+          }
+        }
       },
       (error) => {
         if (error !== null) {

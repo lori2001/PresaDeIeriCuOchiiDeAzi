@@ -11,7 +11,6 @@ import { NewsElement } from '../models/database/news.element';
 export class NewsService {
   baseUrl = 'api';
   news: NewsElement[];
-  errorcode: Observable<number>;
 
 constructor(private http: HttpClient) { }
 
@@ -19,7 +18,6 @@ constructor(private http: HttpClient) { }
     return this.http.get(`${this.baseUrl}/getNews.php`).pipe(
       map((res) => {
         this.news = res['data'];
-        console.log(this.news);
         return this.news;
     }),
     catchError(this.handleError));
