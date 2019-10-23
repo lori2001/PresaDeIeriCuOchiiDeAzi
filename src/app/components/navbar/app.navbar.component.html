@@ -1,4 +1,4 @@
-<section id="navbar">
+<!--<section id="navbar">
     <nav class="navbar navbar-expand-md">
         <div [routerLink]="['/home']" class="circle-border">
             <img class="logo" src="assets/images/logo.png" alt="Website Logo"> 
@@ -14,3 +14,34 @@
         </ul>
     </nav>
 </section>
+-->
+
+<nav class="navbar navbar-expand-md" [ngStyle]="{'background-color': 'rgba(33,70,109,'+ (0) +')', 'width' : width}">
+    <button class="navbar-toggler" (click)="toggleNavbar()" type="button" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="toggler fa fa-bars"></span>
+    </button>
+  
+    <div class="navbar-collapse" (click)="toggleNavbar()" [hidden]="collapse">
+      <ul class="navbar-nav mr-auto">
+           <img class="logo" src="assets/images/logo.png" alt="Website Logo" style="height: 30px; margin-right: 30px;">
+
+            <a [routerLink]="['/home']">{{ 'navbar.home' | translate }}</a>
+            <a [routerLink]="['/team']">{{ 'navbar.team' | translate }}</a>
+            <a [routerLink]="['/activities']">{{ 'navbar.activities' | translate }}</a>
+            <a [routerLink]="['/bv-press']">{{ 'navbar.brasovPress' | translate }}</a>
+            <a [routerLink]="['/sb-press']">{{ 'navbar.sibiuPress' | translate }}</a>
+            <a [routerLink]="['/raports']">{{ 'navbar.raports' | translate }}</a>
+
+            <div class="layout-menu-search ui-fluid" style="margin-left: 8%;">
+                <p-autoComplete [suggestions]="filteredCountriesSingle" (completeMethod)="filterCountrySingle($event)" field="name" [size]="35"
+                placeholder="{{ 'navbar.search' | translate }}" [minLength]="1"></p-autoComplete>
+                <!--<span style="margin-left:10px">Country: {{country ? country.name||country : 'none'}}</span>-->
+            </div>
+
+            <!--
+            <a (click)="setLanguage('ro')" style="margin-left: 120px;">RO</a>
+            <a (click)="setLanguage('hu')" >HU</a>
+            <a (click)="setLanguage('de')" >DE</a>-->
+      </ul>
+    </div>
+  </nav>

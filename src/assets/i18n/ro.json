@@ -1,19 +1,20 @@
 {
-    "menu": {
+    "navbar": {
         "home": "Acasă",
         "team": "Echipă",
         "activities": "Activități",
         "sibiuPress": "Presa sibiană",
         "brasovPress": "Presa brașoveană",
-        "raports": "Rapoarte"
+        "raports": "Rapoarte",
+        "search": "Căutare"
     },
 
     "home": {
 
         "description":{
             "title": "Presa de ieri cu ochii de azi",
-            "text": "Binomul identitate-alteritate în presa brașoveană și sibiană din a doua parte a secolului al XX-lea",
-            "finance": "proiect co-finanțat de AFCN"
+            "text": "Binomul identitate-alteritate în presa brașoveană și sibiană din a doua jumătate a secolului al XIX-lea și începutul secolului al XX-lea",
+            "finance": "proiect co-finanțat de"
         },
         
         "about": {

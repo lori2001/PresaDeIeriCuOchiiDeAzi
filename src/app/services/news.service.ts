@@ -23,6 +23,13 @@ constructor(private http: HttpClient) { }
     catchError(this.handleError));
   }
 
+  getSearchTerms() {
+    return this.http.get(`${this.baseUrl}/getNews.php`)
+                .toPromise()
+                .then(res => <any[]> res['data'])
+                .then(data => data);
+}
+
   private handleError(error: HttpErrorResponse) {
     // return an observable with a user friendly message
     return throwError('Error! Something went wrong!');

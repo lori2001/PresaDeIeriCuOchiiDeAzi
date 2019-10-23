@@ -7,6 +7,8 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import {CarouselModule} from 'primeng/carousel';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import {DropdownModule} from 'primeng/dropdown';
 
 // import ngx-translate and the http loader
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -28,6 +30,9 @@ import { TeamComponent } from './components/team/app.team.component';
 import { NotFoundComponent } from './components/not-found/app.not-found.component';
 import { SibiuPressComponent } from './components/sibiu-press/app.sibiu-press.component';
 import { BrasovPressComponent } from './components/brasov-press/app.brasov-press.component';
+
+// font awesome
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -67,6 +72,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
      CardModule,
      CarouselModule,
      VirtualScrollerModule,
+     AutoCompleteModule,
+     DropdownModule,
+
+     // font awesome
+     AngularFontAwesomeModule,
 
      // translate
      HttpClientModule,

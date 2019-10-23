@@ -24,6 +24,14 @@
   font-family: TypewriterThin;
   src: url(assets/fonts/JMH-Typewriter-Thin.ttf) format("truetype");
 }
+@font-face {
+  font-family: arialBlack;
+  src: url(assets/fonts/Arial-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: lexendDecaRegular;
+  src: url(assets/fonts/LexendDecaRegular.ttf) format("truetype");
+}
 
 /*Smooth scrolling*/
 /*Non-Compatible with explorer,edge and safari*/
@@ -36,5 +44,5 @@ html {
   body {
     margin: 0;
     line-height: 1;
-    background-color: white; /*rgb(255,255,224)*/
+    background-color: rgb(55,55,55);
   }
