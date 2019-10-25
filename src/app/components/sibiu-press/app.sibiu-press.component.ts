@@ -27,7 +27,7 @@ export class SibiuPressComponent implements OnInit {
     const pubYear = Number(newsElement.publish_date.substring(0, 4));
 
     if (yearsIndex + 1 >= this.years.length) {
-      if(pubYear > this.years[yearsIndex].val) {
+      if (pubYear > this.years[yearsIndex].val) {
         return true;
       } else {
         return false;
@@ -44,12 +44,12 @@ export class SibiuPressComponent implements OnInit {
       (res: NewsElement[]) => {
         this.newsGroup = res;
 
-        for (let it of this.newsGroup){
-          if (it.noMonth && it.noDay){
+        for (const it of this.newsGroup) {
+          if (it.noMonth && it.noDay) {
             it.publish_date = it.publish_date.substring(0, 4);
-          } else if(it.noDay) {
+          } else if (it.noDay) {
             it.publish_date = it.publish_date.substring(0, 7);
-          } else if(it.noMonth) {
+          } else if (it.noMonth) {
             it.publish_date = it.publish_date.substring(0, 4) + '-00-' + it.publish_date.substring(8, 10);
           }
         }

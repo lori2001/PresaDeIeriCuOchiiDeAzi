@@ -4,7 +4,7 @@
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     
-    width: 300px;
+    width: 100%;
     text-align: center;
 }
 

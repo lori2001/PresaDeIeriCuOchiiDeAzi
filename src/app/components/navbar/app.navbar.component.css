@@ -3,7 +3,7 @@
   position: fixed;
   z-index: 100;
 
-  min-height: 55px;
+  height: 50px;
 
   width: 100%;
   white-space: nowrap;
@@ -24,7 +24,7 @@
   border: none;
   background: none;
   display: inline-block;
-  padding-top: 3px;
+  padding-top: 7px;
   margin-left: 25px;
   text-decoration: none;
   text-align: left;
@@ -36,8 +36,8 @@
   -ms-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
-.navbar-nav a:hover { 
-  color: rgb(253, 163, 74) !important; 
+.navbar-nav a:hover, .navbar-nav .active-link { 
+  color: rgb(255, 187, 0) !important; 
   cursor:pointer;
 }
 /*hides outline when on focus*/
@@ -63,14 +63,14 @@
   font-size: 20px;
   width: 30px;
   height: 30px;
-  background-color: #4380BC ; 
+  background-color: rgb(110, 62, 22); 
 }
 /*hides outline when on focus*/
 .navbar-toggler:focus {
   outline: none;
 }
 
-/* Normal mode */
+/* Normal mode 
 @media screen and (min-width: 768px){
   .navbar-nav a{
     line-height: initial;
@@ -91,7 +91,7 @@
     border-color: #4380BC !important;
   }
 }
-/* Mobile mode */
+/* Mobile mode 
 @media screen and (min-width: 0px) and (max-width: 767px){
   .navbar-nav a{
     line-height: 25px;
@@ -100,3 +100,4 @@
     margin-left: -5px;
   }
 }
+*/

@@ -21,17 +21,15 @@ export class NavbarComponent {
     return this._mainPage;
   }
 
-  @Input() offset = -48;
-
   @Input()
   set mainPage(value: boolean) {
     this._mainPage = value;
     if (!this._mainPage) {
       // should return full opacity background except for mobileMode
       this.checkMobileMode();
+      this.calcOpacity();
     }
   }
-
   width = '100%'; // background width
   bgopacity = 0; // background opacity
 
@@ -76,7 +74,25 @@ export class NavbarComponent {
       this.mobileMode = false; // disables mobile mode
 
       this.width = '100%'; // max width
-      this.bgopacity = 1;
+      this.calcOpacity(); // controls this.bgopacity
+    }
+  }
+  @HostListener('window:scroll', ['$event'])
+  calcOpacity() {
+    if (!this.mobileMode) {
+
+      // calculates the background opacity
+      this.bgopacity = window.pageYOffset / window.innerHeight;
+
+      // if it surpasses 1(100%) it is 1
+      if (this.bgopacity > 1) {
+        this.bgopacity = 1;
+      }
+
+      // non-main pages look ugly with transparent navbar
+      if (!this.mainPage) {
+        this.bgopacity = 1;
+      }
     }
   }
 
