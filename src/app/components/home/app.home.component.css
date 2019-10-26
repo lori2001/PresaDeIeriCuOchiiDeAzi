@@ -95,39 +95,69 @@
 .cards .news {
   margin: 0 7px;
 }
-/*
-@media screen and (min-width: 0px) and (max-width: 1866px)
-{
-.finance img {
-  width: 2.1cm;
-}
-.finance h3 {
-  margin-right: 20px;
-  margin-top: 28px;
 
-  font-size: 1.4rem;
+.about {
+  width: 100%;
+  padding: 40px 150px;
 }
-.banner .finance {
-  bottom: 4%;
-  right: 2.5%;
+
+.about .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
 }
-.text .cards {
-  padding-left: 7.5%;
-  padding-right: 7.5%;
-  padding-top: 35px;
-  width: 72.5%;
+
+.about .data {
+  display: inline-block;
+  margin-bottom: 20px;
 }
-.text .title {
-  width: 75%;
-  font-size: 3.4rem;
+
+.about .data img {
+  float: left;
+  width: 15%;
+  padding-right: 30px;
 }
-.banner .text {
-  width: 80%;
+
+.about .data .txt {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px;
+  float: right;
+  width: 85%;
+  color: white;
 }
-.text .description {
-  line-height: 125%;
-  height: 100%;
-  width: 25%;
-  font-size: 2.5rem;
+
+.data h2 {
+  font-size: 1.8vw;
 }
-}*/
+.data p {
+  font-size: 1vw;
+  margin-top: 20px;
+}
+
+.about .target {
+  display: inline-block;
+}
+
+.about .target img {
+  float: left;
+  width: 15%;
+  padding: 20px;
+  padding-right: 50px;
+}
+
+.about .target .txt {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px;
+  float: right;
+  width: 85%;
+  color: white;
+}
+
+.target h2 {
+  font-size: 1.8vw;
+}
+.target p {
+  font-size: 1vw;
+  margin-top: 20px;
+}

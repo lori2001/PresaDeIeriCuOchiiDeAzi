@@ -1,15 +1,13 @@
-#footer{
+#footer {
   z-index: 80;
 
   position: relative;
 
   display: block;
 }
-#footer .content{
-  
+#footer .content {
   width: 100%;
   height: 55px;
-  background-color: #21466D;
 }
 
 .content .text {
