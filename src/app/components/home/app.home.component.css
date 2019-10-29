@@ -137,6 +137,7 @@
 
 .about .target {
   display: inline-block;
+  margin-bottom: 20px;
 }
 
 .about .target img {
@@ -158,6 +159,33 @@
   font-size: 1.8vw;
 }
 .target p {
+  font-size: 1vw;
+  margin-top: 20px;
+}
+
+.about .activities {
+  display: inline-block;
+}
+
+.about .activities img {
+  float: left;
+  width: 15%;
+  padding: 10px;
+  padding-right: 40px;
+}
+
+.about .activities .txt {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px;
+  float: right;
+  width: 85%;
+  color: white;
+}
+
+.activities h2 {
+  font-size: 1.8vw;
+}
+.activities p {
   font-size: 1vw;
   margin-top: 20px;
 }

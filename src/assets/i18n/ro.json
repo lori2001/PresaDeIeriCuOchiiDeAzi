@@ -1,11 +1,11 @@
 {
     "navbar": {
         "home": "Acasă",
+        "about": "Despre",
         "team": "Echipă",
-        "activities": "Activități",
+        "raports": "Rapoarte",
         "sibiuPress": "Presa sibiană",
         "brasovPress": "Presa brașoveană",
-        "raports": "Rapoarte",
         "search": "Căutare"
     },
 
@@ -19,10 +19,21 @@
         
         "about": {
             "title": "Despre Proiect",
-            "subtitle1": "Date despre proiect",
-            "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, nisi nulla eleifend libero, gravida sollicitudin tortor diam ut magna. Nam convallis ligula at hendrerit eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed mattis nec sapien vel accumsan. Duis commodo ultricies felis, id blandit libero imperdiet sed. Aliquam at pulvinar orci. Nulla ullamcorper, ante bibendum porttitor vehicula, felis nisi laoreet diam, et convallis nisi tortor posuere lacus. Donec velit est, pellentesque ac elit in, condimentum dignissim nulla. Suspendisse ac eleifend ex. Nunc urna arcu, vehicula ac ipsum vitae, maximus consectetur nisi. Etiam eget turpis nibh. Ut aliquam aliquam nisi quis interdum. ",
-            "subtitle2": "Obiective",
-            "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, nisi nulla eleifend libero, gravida sollicitudin tortor diam ut magna. Nam convallis ligula at hendrerit eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed mattis nec sapien vel accumsan. Duis commodo ultricies felis, id blandit libero imperdiet sed. Aliquam at pulvinar orci. Nulla ullamcorper, ante bibendum porttitor vehicula, felis nisi laoreet diam, et convallis nisi tortor posuere lacus. Donec velit est, pellentesque ac elit in, condimentum dignissim nulla. Suspendisse ac eleifend ex. Nunc urna arcu, vehicula ac ipsum vitae, maximus consectetur nisi. Etiam eget turpis nibh. Ut aliquam aliquam nisi quis interdum. "
+
+            "data": {
+                "title": "Date despre proiect",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, nisi nulla eleifend libero, gravida sollicitudin tortor diam ut magna. Nam convallis ligula at hendrerit eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed mattis nec sapien vel accumsan. Duis commodo ultricies felis, id blandit libero imperdiet sed. Aliquam at pulvinar orci. Nulla ullamcorper, ante bibendum porttitor vehicula, felis nisi laoreet diam, et convallis nisi tortor posuere lacus. Donec velit est, pellentesque ac elit in, condimentum dignissim nulla. Suspendisse ac eleifend ex. Nunc urna arcu, vehicula ac ipsum vitae, maximus consectetur nisi. Etiam eget turpis nibh. Ut aliquam aliquam nisi quis interdum. "
+            },
+
+            "target": {
+                "title": "Obiective",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, nisi nulla eleifend libero, gravida sollicitudin tortor diam ut magna. Nam convallis ligula at hendrerit eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed mattis nec sapien vel accumsan. Duis commodo ultricies felis, id blandit libero imperdiet sed. Aliquam at pulvinar orci. Nulla ullamcorper, ante bibendum porttitor vehicula, felis nisi laoreet diam, et convallis nisi tortor posuere lacus. Donec velit est, pellentesque ac elit in, condimentum dignissim nulla. Suspendisse ac eleifend ex. Nunc urna arcu, vehicula ac ipsum vitae, maximus consectetur nisi. Etiam eget turpis nibh. Ut aliquam aliquam nisi quis interdum. "
+            },
+
+            "activities": {
+                "title": "Activități",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, nisi nulla eleifend libero, gravida sollicitudin tortor diam ut magna. Nam convallis ligula at hendrerit eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed mattis nec sapien vel accumsan. Duis commodo ultricies felis, id blandit libero imperdiet sed. Aliquam at pulvinar orci. Nulla ullamcorper, ante bibendum porttitor vehicula, felis nisi laoreet diam, et convallis nisi tortor posuere lacus. Donec velit est, pellentesque ac elit in, condimentum dignissim nulla. Suspendisse ac eleifend ex. Nunc urna arcu, vehicula ac ipsum vitae, maximus consectetur nisi. Etiam eget turpis nibh. Ut aliquam aliquam nisi quis interdum. "
+            }
         }
     },
 
