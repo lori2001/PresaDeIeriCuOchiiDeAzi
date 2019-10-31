@@ -58,7 +58,7 @@ export class SibiuPressComponent implements OnInit {
         if (error !== null) {
           console.log('An error happened!');
 
-          /*this.messageService.add({
+          /*this.messageService.add({0
             key: 'custom',
             severity: 'warn',
             summary: 'points.error.summary',

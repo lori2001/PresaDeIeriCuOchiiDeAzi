@@ -58,15 +58,13 @@
 }
 
 .text .cards {
-  float: right;
-  display: inline-grid;
-
-  grid-template-columns: auto auto auto;
-
-  padding-left: 7.5%;
-  padding-right: 5%;
-  padding-top: 35px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3.5%;
   width: 75%;
+  height: auto;
+
+  float: right;
 }
 
 .banner .finance {
@@ -93,7 +91,26 @@
 }
 
 .cards .news {
-  margin: 0 7px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.cards .news {
+  text-decoration: none !important;
+}
+
+.cards .news:hover {
+  transform: scale(1.07);
 }
 
 .about {

@@ -21,6 +21,9 @@
     height: 98%;
 
     margin: 1%;
+
+
+    max-height: 250px;
     /*min-width: 300px;
     min-height: 250px;*/
 }
