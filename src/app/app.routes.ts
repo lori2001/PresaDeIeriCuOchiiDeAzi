@@ -3,14 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Page Components
 import { HomeComponent } from './components/home/app.home.component';
-import { TeamComponent } from './components/team/app.team.component';
 import { NotFoundComponent } from './components/not-found/app.not-found.component';
 import { SibiuPressComponent } from './components/sibiu-press/app.sibiu-press.component';
 import { BrasovPressComponent } from './components/brasov-press/app.brasov-press.component';
 
 const routes: Routes = [
     {path : 'home', component : HomeComponent},
-    {path : 'team', component : TeamComponent},
     {path : 'brasov-press', component : BrasovPressComponent},
     {path : 'sibiu-press', component : SibiuPressComponent},
     {path : 'not-found', component : NotFoundComponent},

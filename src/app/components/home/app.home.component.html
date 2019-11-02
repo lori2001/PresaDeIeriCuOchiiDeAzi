@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <section id="home">
-    <div class="banner">
+    <div id="banner">
         <img class="bg" src="../../../assets/images/books.jpg" alt="Background Books">
 
         <div class="text">
@@ -12,7 +12,7 @@
                     <div *ngIf="smallerThan3(i)" class="news">
                         <a href="{{item.href}}" >
                             <p-card header="{{item.name}}" subheader="{{item.publish_date}}"
-                            [style]="{width: '100%', 'color':'white', 'background':'#4f3622'}"
+                            [style]="{width: '100%', 'color':'white', 'background':'rgba(79,54,34,0.8)'}"
                             class="card-style" styleClass="ui-card-shadow">
                                 <p-header>
                                     <img src="{{item.img}}">
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="about" style="background-color: rgb(25, 25, 25);">
+    <div id="about">
         <h1 class="title" style="color:white;">{{ 'home.about.title' | translate}}</h1>
         
         <div class="data">
@@ -59,8 +59,40 @@
         </div>
     </div>
 
-    <div style="width: 100%; height: 800px;">
-        <h1 class="title" style="color:white;">Echipa</h1>
+    <div id="team">
+        <h1 style="color:white;">{{ 'home.team.title' | translate}}</h1>
+
+
+        <div style="text-align: center;" class="container">
+            <div class="row">
+                <a class="col" href="../../../assets/doc/cv/molnar-stefania.pdf">
+                    <img src="../../../assets/images/team/molnar-stefania.jpg">
+                    <h2>{{ 'home.team.molnar-stefania.name' | translate}}</h2>
+                </a>
+                <a class="col" href="../../../assets/doc/cv/molnar-csaba.pdf">
+                    <img src="../../../assets/images/team/molnar-csaba.jpg">
+                    <h2>{{ 'home.team.molnar-csaba.name' | translate}}</h2>
+                </a>
+                <a class="col" href="../../../assets/doc/cv/konya-ecaterina.pdf">
+                    <img src="../../../assets/images/team/konya-ecaterina.jpg">
+                    <h2>{{ 'home.team.konya-ecaterina.name' | translate}}</h2>
+                </a>
+            </div>
+            <div class="row">
+                <a class="col" href="../../../assets/doc/cv/ambrus-attila.pdf">
+                    <img src="../../../assets/images/team/ambrus-attila.jpg">
+                    <h2>{{ 'home.team.ambrus-attila.name' | translate}}</h2>
+                </a>
+                <a class="col" href="../../../assets/doc/cv/cornel-maria.pdf">
+                    <img src="../../../assets/images/team/cornel-maria.jpg">
+                    <h2>{{ 'home.team.cornel-maria.name' | translate}}</h2>
+                </a>
+                <a class="col" href="../../../assets/doc/cv/grancea-mihaela.pdf">
+                    <img src="../../../assets/images/team/grancea-mihaela.jpg">
+                    <h2>{{ 'home.team.grancea-mihaela.name' | translate}}</h2>
+                </a>
+            </div>
+        </div>
 
     </div>
     

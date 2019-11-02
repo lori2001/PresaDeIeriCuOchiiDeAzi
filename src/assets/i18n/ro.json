@@ -34,34 +34,36 @@
                 "title": "Activități",
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, nisi nulla eleifend libero, gravida sollicitudin tortor diam ut magna. Nam convallis ligula at hendrerit eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed mattis nec sapien vel accumsan. Duis commodo ultricies felis, id blandit libero imperdiet sed. Aliquam at pulvinar orci. Nulla ullamcorper, ante bibendum porttitor vehicula, felis nisi laoreet diam, et convallis nisi tortor posuere lacus. Donec velit est, pellentesque ac elit in, condimentum dignissim nulla. Suspendisse ac eleifend ex. Nunc urna arcu, vehicula ac ipsum vitae, maximus consectetur nisi. Etiam eget turpis nibh. Ut aliquam aliquam nisi quis interdum. "
             }
-        }
-    },
+        },
 
-    "team": {
-        "molnar-stefania": {
-            "name": "Molnár Stefánia",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
-        },
-        "molnar-csaba": {
-            "name": "Molnár Csaba",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
-        },
-        "konya-ecaterina": {
-            "name": "Kónya Ecaterina",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
-        },
-        "ambrus-attila": {
-            "name": "Ambrus Attila",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
-        },
-        "cornel-maria": {
-            "name": "Cornel-Mihai Maria",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
-        },
-        "grancea-mihaela": {
-            "name": "Grancea Mihaela",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+        "team": {
+            "title" : "Echipă",
+            "molnar-stefania": {
+                "name": "Molnár Stefánia",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+            },
+            "molnar-csaba": {
+                "name": "Molnár Csaba",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+            },
+            "konya-ecaterina": {
+                "name": "Kónya Ecaterina",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+            },
+            "ambrus-attila": {
+                "name": "Ambrus Attila",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+            },
+            "cornel-maria": {
+                "name": "Cornel-Mihai Maria",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+            },
+            "grancea-mihaela": {
+                "name": "Grancea Mihaela",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+            }
         }
+    
     },
 
     "not-found": {

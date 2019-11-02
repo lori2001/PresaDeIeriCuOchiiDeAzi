@@ -26,7 +26,6 @@ import { CardComponent } from './components/card/app.card.component';
 import { NavbarComponent } from './components/navbar/app.navbar.component';
 import { HomeComponent } from './components/home/app.home.component';
 import { FooterComponent } from './components/footer/app.footer.component';
-import { TeamComponent } from './components/team/app.team.component';
 import { NotFoundComponent } from './components/not-found/app.not-found.component';
 import { SibiuPressComponent } from './components/sibiu-press/app.sibiu-press.component';
 import { BrasovPressComponent } from './components/brasov-press/app.brasov-press.component';
@@ -45,7 +44,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
     // page components
     HomeComponent,
-    TeamComponent,
     BrasovPressComponent,
     SibiuPressComponent,
 

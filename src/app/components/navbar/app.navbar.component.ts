@@ -82,11 +82,11 @@ export class NavbarComponent {
     if (!this.mobileMode) {
 
       // calculates the background opacity
-      this.bgopacity = 0.85 * window.pageYOffset / window.innerHeight;
+      this.bgopacity = window.pageYOffset / window.innerHeight;
 
       // if it surpasses 1(100%) it is 1
       if (this.bgopacity > 1) {
-        this.bgopacity = 1;
+        this.bgopacity = 0.85 * 1;
       }
 
       // non-main pages look ugly with transparent navbar
