@@ -25,9 +25,9 @@
       <ul class="navbar-nav mr-auto">
            <img *ngIf="this.mobileMode === false" class="logo" src="assets/images/logo.png" alt="Website Logo" style="height: 30px; margin-right: 30px;">
 
-            <a [routerLink]="['/home']" routerLinkActive="active-link">{{ 'navbar.home' | translate }}</a>
-            <a [ngx-scroll-to]="'#about'" routerLinkActive="active-link">{{ 'navbar.about' | translate }}</a>
-            <a [ngx-scroll-to]="'#team'" routerLinkActive="active-link">{{ 'navbar.team' | translate }}</a>
+            <a [routerLink]="['/home']" [ngx-scroll-to]="'#banner'" routerLinkActive="active-link">{{ 'navbar.home' | translate }}</a>
+            <a [routerLink]="['/home']" [ngx-scroll-to]="'#about'">{{ 'navbar.about' | translate }}</a>
+            <a [routerLink]="['/home']" [ngx-scroll-to]="'#team'">{{ 'navbar.team' | translate }}</a>
             <a [routerLink]="['/raports']" routerLinkActive="active-link">{{ 'navbar.raports' | translate }}</a>
             <a [routerLink]="['/bv-press']" routerLinkActive="active-link">{{ 'navbar.brasovPress' | translate }}</a>
             <a [routerLink]="['/sb-press']" routerLinkActive="active-link">{{ 'navbar.sibiuPress' | translate }}</a>
