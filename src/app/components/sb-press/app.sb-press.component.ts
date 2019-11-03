@@ -9,16 +9,16 @@ export interface Car {
 }
 
 @Component({
-  selector: 'app-brasov-press',
-  templateUrl: './app.brasov-press.component.html',
-  styleUrls: ['./app.brasov-press.component.css']
+  selector: 'app-sb-press',
+  templateUrl: './app.sb-press.component.html',
+  styleUrls: ['./app.sb-press.component.css']
 })
-export class BrasovPressComponent implements OnInit {
+export class SbPressComponent implements OnInit {
 
     cars: Car[] = [];
 
     lazyCars: Car[];
-    
+
     brands: string[];
 
     colors: string[];
@@ -44,7 +44,7 @@ export class BrasovPressComponent implements OnInit {
             this.cars.push(this.generateCar());
         }
 
-        //in a real application, make a remote request to retrieve the number of records only, not the actual records
+        // in a real application, make a remote request to retrieve the number of records only, not the actual records
         this.totalLazyCarsLength = 10000;
 
         this.sortOptions = [
@@ -63,13 +63,13 @@ export class BrasovPressComponent implements OnInit {
     }
 
     generateVin() {
-        let text = "";
-        let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        
-        for (var i = 0; i < 5; i++) {
+        let text = '';
+        const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+        for (let i = 0; i < 5; i++) {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         }
-        
+
         return text;
     }
 
@@ -94,7 +94,7 @@ export class BrasovPressComponent implements OnInit {
         if (this.timeout) {
             clearTimeout(this.timeout);
         }
-        
+
         this.timeout = setTimeout(() => {
             this.lazyCars = [];
             if (this.cars) {
@@ -104,18 +104,20 @@ export class BrasovPressComponent implements OnInit {
     }*/
 
     onSortChange() {
-        if (this.sortKey.indexOf('!') === 0)
+        if (this.sortKey.indexOf('!') === 0) {
             this.sort(-1);
-        else
+
+        } else {
             this.sort(1);
+        }
     }
 
     sort(order: number): void {
-        let cars = [...this.cars];
+        const cars = [...this.cars];
         cars.sort((data1, data2) => {
-            let value1 = data1.year;
-            let value2 = data2.year;
-            let result = (value1 < value2) ? -1 : (value1 > value2) ? 1 : 0;
+            const value1 = data1.year;
+            const value2 = data2.year;
+            const result = (value1 < value2) ? -1 : (value1 > value2) ? 1 : 0;
 
             return (order * result);
         });

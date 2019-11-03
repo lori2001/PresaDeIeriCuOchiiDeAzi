@@ -63,8 +63,13 @@
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
             }
         }
-    
     },
+
+    "press": {
+        "romanian" : "Română",
+        "hungarian" : "Maghiară",
+        "german": "Germană"
+    } ,
 
     "not-found": {
         "text": "Ne pare rău",

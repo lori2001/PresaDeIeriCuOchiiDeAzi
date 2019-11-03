@@ -27,8 +27,8 @@ import { NavbarComponent } from './components/navbar/app.navbar.component';
 import { HomeComponent } from './components/home/app.home.component';
 import { FooterComponent } from './components/footer/app.footer.component';
 import { NotFoundComponent } from './components/not-found/app.not-found.component';
-import { SibiuPressComponent } from './components/sibiu-press/app.sibiu-press.component';
-import { BrasovPressComponent } from './components/brasov-press/app.brasov-press.component';
+import { SbPressComponent } from './components/sb-press/app.sb-press.component';
+import { BvPressComponent } from './components/bv-press/app.bv-press.component';
 
 // font awesome
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -44,8 +44,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
     // page components
     HomeComponent,
-    BrasovPressComponent,
-    SibiuPressComponent,
+    BvPressComponent,
+    SbPressComponent,
 
     // 404 component
     NotFoundComponent,

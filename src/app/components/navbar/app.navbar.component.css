@@ -70,6 +70,15 @@
   outline: none;
 }
 
+::ng-deep body .ui-inputtext {
+  background-color: white !important;
+  color: black !important;
+}
+/*
+::ng-deep body .ui-autocomplete-panel {
+  background-color: white !important;
+}*/
+
 /* Normal mode 
 @media screen and (min-width: 768px){
   .navbar-nav a{
