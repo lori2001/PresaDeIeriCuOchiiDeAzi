@@ -1,20 +1,9 @@
-CREATE TABLE news(
-	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255),
-	img varchar(255),
-	href varchar(255),
-	description varchar(255),
-	category varchar(255),
-	language varchar(255),
-	noDay BOOLEAN,
-	noMonth BOOLEAN,
-	page int,
-	number int,
-	publish_date DATE,
-	keywords varchar(255),
-	PRIMARY KEY(id)
-);
+CREATE DATABASE presaia_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE presaia_db;
 
-INSERT INTO `news`(`name`, `img`, `href`, `description`, `category`, `language`, `noDay`, `noMonth`, `page`, `number`, `publish_date`, `keywords`) VALUES ('Brassó 1885-1894','../../../assets/doc/news/Brassó 1885-1894;bv;hu/Brassó1885/001;1885.02.17;0;A magyar allam es anemzetisegek.jpg','../../../assets/doc/news/Brassó 1885-1894;bv;hu/Brassó1885/001;1885.02.17;0;A magyar allam es anemzetisegek.jpg','A magyar allam es anemzetisegek','bv','hu',false ,false ,0,1,'1885-02-17',' ');
-INSERT INTO `news`(`name`, `img`, `href`, `description`, `category`, `language`, `noDay`, `noMonth`, `page`, `number`, `publish_date`, `keywords`) VALUES ('Brassó 1885-1894','../../../assets/doc/news/Brassó 1885-1894;bv;hu/Brassó1885/100;1885.02.17;0;Az erdelyi szaszok magyarositasa.jpg','../../../assets/doc/news/Brassó 1885-1894;bv;hu/Brassó1885/100;1885.02.17;0;Az erdelyi szaszok magyarositasa.jpg','Az erdelyi szaszok magyarositasa','bv','hu',false ,false ,0,100,'1885-02-17',' ');
-INSERT INTO `news`(`name`, `img`, `href`, `description`, `category`, `language`, `noDay`, `noMonth`, `page`, `number`, `publish_date`, `keywords`) VALUES ('Brassói Hiradó 1891','../../../assets/doc/news/Brassói Hiradó 1891;bv;hu/004;1891.02.04;0; őúáűüóöíăîșțâ lapszemle.jpg','../../../assets/doc/news/Brassói Hiradó 1891;bv;hu/004;1891.02.04;0; őúáűüóöíăîșțâ lapszemle.jpg',' őúáűüóöíăîșțâ lapszemle','bv','hu',false ,false ,0,4,'1891-02-04',' ');
+CREATE TABLE IF NOT EXISTS news(	id int NOT NULL AUTO_INCREMENT,	name varchar(255),	href varchar(255),	description varchar(255),	category varchar(255),	language varchar(255),	noDay BOOLEAN,	noMonth BOOLEAN,	page int,	num int,	publish_date DATE,	keywords varchar(255),	PRIMARY KEY(id));
+
+INSERT INTO `news`(`name`, `href`, `description`, `category`, `language`, `noDay`, `noMonth`, `page`, `num`, `publish_date`, `keywords`) VALUES ('Brassó 1885-1894','../../../assets/doc/news/Brassó 1885-1894;bv;hu/Brassó1885/001;1885.02.17;0;A magyar allam es anemzetisegek.jpg','A magyar allam es anemzetisegek','bv','hu',false ,false ,0 ,1 ,'1885-02-17',' ' );
+INSERT INTO `news`(`name`, `href`, `description`, `category`, `language`, `noDay`, `noMonth`, `page`, `num`, `publish_date`, `keywords`) VALUES ('Brassó 1885-1894','../../../assets/doc/news/Brassó 1885-1894;bv;hu/Brassó1885/100;1885.02.17;0;Az erdelyi szaszok magyarositasa.jpg','Az erdelyi szaszok magyarositasa','bv','hu',false ,false ,0 ,100 ,'1885-02-17',' ' );
+INSERT INTO `news`(`name`, `href`, `description`, `category`, `language`, `noDay`, `noMonth`, `page`, `num`, `publish_date`, `keywords`) VALUES ('Brassói Hiradó 1891','../../../assets/doc/news/Brassói Hiradó 1891;bv;hu/004;1891.02.04;0; őúáűüóöíăîșțâ lapszemle.jpg',' őúáűüóöíăîșțâ lapszemle','bv','hu',false ,false ,0 ,4 ,'1891-02-04',' ' );
+

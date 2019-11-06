@@ -28,17 +28,27 @@
             <a [routerLink]="['/home']" [ngx-scroll-to]="'#banner'" routerLinkActive="active-link">{{ 'navbar.home' | translate }}</a>
             <a [routerLink]="['/home']" [ngx-scroll-to]="'#about'">{{ 'navbar.about' | translate }}</a>
             <a [routerLink]="['/home']" [ngx-scroll-to]="'#team'">{{ 'navbar.team' | translate }}</a>
-            <a [routerLink]="['/raports']" routerLinkActive="active-link">{{ 'navbar.raports' | translate }}</a>
+            <!--<a [routerLink]="['/raports']" routerLinkActive="active-link">{{ 'navbar.raports' | translate }}</a>-->
             <a [routerLink]="['/bv-press']" routerLinkActive="active-link">{{ 'navbar.brasovPress' | translate }}</a>
             <a [routerLink]="['/sb-press']" routerLinkActive="active-link">{{ 'navbar.sibiuPress' | translate }}</a>
 
-            <div class="layout-menu-search ui-fluid" style="margin-left: 8%;">
-                <p-autoComplete [suggestions]="filteredCountriesSingle" (completeMethod)="filterCountrySingle($event)" field="name" [size]="35"
-                placeholder="{{ 'navbar.search' | translate }}" [minLength]="1"></p-autoComplete>
-                <!--<span style="margin-left:10px">Country: {{country ? country.name||country : 'none'}}</span>-->
+            <div class="layout-menu-search ui-fluid" style="margin-left: 4%;">
+                <p-autoComplete
+                [(ngModel)]="searchedNews"
+                (keyup.enter)="showNews()"
+                [suggestions]="filteredNewsGroupSingle"
+                (completeMethod)="filterNewsSingle($event)"
+                [forceSelection]="true"
+                field="name"
+                [size]="35"
+                placeholder="{{ 'navbar.search' | translate }}"
+                [minLength]="1">
+                </p-autoComplete>
             </div>
 
+
             <!--
+            <a href="../../../assets/doc/news/Brassoi Magyar Újsag;bv;hu/1893/123;1893.00.00;1;Román-szász szövetség.pdf">awwwa</a>
             <a (click)="setLanguage('ro')" style="margin-left: 120px;">RO</a>
             <a (click)="setLanguage('hu')" >HU</a>
             <a (click)="setLanguage('de')" >DE</a>-->

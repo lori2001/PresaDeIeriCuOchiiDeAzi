@@ -7,8 +7,8 @@ import { NewsElement } from 'src/app/models/database/news.element';
   templateUrl: './app.home.component.html',
   styleUrls: ['./app.home.component.css']
 })
-export class HomeComponent implements OnInit {
-
+export class HomeComponent {
+/*
   newsGroup: NewsElement[];
 
   constructor(private newsService: NewsService) {
@@ -44,15 +44,15 @@ export class HomeComponent implements OnInit {
         if (error !== null) {
           console.log('An error happened!');
 
-          /*this.messageService.add({
-            key: 'custom',
-            severity: 'warn',
-            summary: 'points.error.summary',
-            detail: 'points.error.detail'
-          });*/
+          // this.messageService.add({
+          //  key: 'custom',
+          //  severity: 'warn',
+          //  summary: 'points.error.summary',
+          // detail: 'points.error.detail'
+          // });
         }
       }
     );
   }
-  
+  */
 }

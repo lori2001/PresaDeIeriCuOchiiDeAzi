@@ -1,0 +1,29 @@
+#card {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    
+    width: 100%;
+    text-align: center;
+}
+
+#card a {
+    text-decoration: none !important;
+}
+
+#card:hover {
+    transform: scale(1.1);
+}
+
+.card_image{
+    width: 98%;
+    height: 98%;
+
+    margin: 1%;
+
+
+    max-height: 250px;
+    /*min-width: 300px;
+    min-height: 250px;*/
+}

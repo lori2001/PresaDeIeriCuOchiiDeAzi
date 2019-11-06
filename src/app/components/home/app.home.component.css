@@ -134,6 +134,7 @@
 #about .data img {
   float: left;
   width: 15%;
+  padding-top: 25px;
   padding-right: 30px;
 }
 
@@ -143,6 +144,7 @@
   float: right;
   width: 85%;
   color: white;
+  line-height: 1.25;
 }
 
 .data h2 {
@@ -163,6 +165,7 @@
   width: 15%;
   padding: 20px;
   padding-right: 50px;
+  padding-top: 45px;
 }
 
 #about .target .txt {
@@ -171,6 +174,7 @@
   float: right;
   width: 85%;
   color: white;
+  line-height: 1.25;
 }
 
 .target h2 {
@@ -190,6 +194,7 @@
   width: 15%;
   padding: 10px;
   padding-right: 40px;
+  padding-top: 55px;
 }
 
 #about .activities .txt {
@@ -198,6 +203,7 @@
   float: right;
   width: 85%;
   color: white;
+  line-height: 1.25;
 }
 
 .activities h2 {

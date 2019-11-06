@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // primeng
 import { ButtonModule } from 'primeng/button';
@@ -22,7 +23,6 @@ import { AppRoutingModule } from './app.routes';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { AppComponent } from './app.component';
-import { CardComponent } from './components/card/app.card.component';
 import { NavbarComponent } from './components/navbar/app.navbar.component';
 import { HomeComponent } from './components/home/app.home.component';
 import { FooterComponent } from './components/footer/app.footer.component';
@@ -52,10 +52,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
     // item components
     NavbarComponent,
-    FooterComponent,
-    CardComponent
+    FooterComponent
     ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
 

@@ -1,7 +1,6 @@
 import { Component, HostListener, ElementRef, Input } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import { NewsService } from 'src/app/services/news.service';
-import { NewsElement } from 'src/app/models/database/news.element';
 
 
 @Component({
@@ -38,29 +37,50 @@ export class NavbarComponent {
 
   private _mainPage = true; // checks and behaves differently whether the user is on main page or not
 
-  country: any;
-  countries: any[];
-  filteredCountriesSingle: any[];
+  searchedNews: any;
+  NewsGroup: any[];
+  filteredNewsGroupSingle: any[];
 
   Lang: string;
 
-  filterCountrySingle(event) {
+  filterNewsSingle(event) {
     const query = event.query;
-    this.newsService.getSearchTerms().then(countries => {
-        this.filteredCountriesSingle = this.filterCountry(query, countries);
+    this.newsService.getSearchTerms().then(elements => {
+        this.filteredNewsGroupSingle = this.filterNews(query, elements);
     });
   }
 
-  filterCountry(query, countries: any[]): any[] {
+  filterNews(query, elements: any[]): any[] {
     // in a real application, make a request to a remote url with the query and return filtered results, for demo we filter at client side
     const filtered: any[] = [];
-    for (let i = 0; i < countries.length; i++) {
-        const country = countries[i];
-        if ( country.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
-            filtered.push(country);
+    for (let i = 0; i < elements.length; i++) {
+        let news = elements[i];
+        
+        if ( news.name.toLowerCase().indexOf(query.toLowerCase()) === 0 ||
+             news.publish_date.toLowerCase().indexOf(query.toLowerCase()) === 0 ||
+             String(news.num).toLowerCase().indexOf(query.toLowerCase()) === 0 ||
+             String(news.page).toLowerCase().indexOf(query.toLowerCase()) === 0) {
+
+            if (news.noMonth && news.noDay) {
+              news.publish_date = news.publish_date.substring(0, 4);
+            } else if (news.noDay) {
+              news.publish_date = news.publish_date.substring(0, 7);
+            } else if (news.noMonth) {
+              news.publish_date = news.publish_date.substring(0, 4) + '-00-' + news.publish_date.substring(8, 10);
+            }
+            
+            news.name = news.publish_date + ' ' + elements[i].name + ' - Nr.' + elements[i].num + ' Pg.' + elements[i].page ;
+
+            filtered.push(news);
         }
     }
     return filtered;
+  }
+
+  showNews(){
+    if(this.searchedNews) {
+      window.location.href = this.searchedNews.href;
+    }
   }
 
   @HostListener('window:resize', ['$event'])
@@ -86,7 +106,7 @@ export class NavbarComponent {
 
       // if it surpasses 1(100%) it is 1
       if (this.bgopacity > 1) {
-        this.bgopacity = 0.85 * 1;
+        this.bgopacity = 0.9 * 1;
       }
 
       // non-main pages look ugly with transparent navbar
