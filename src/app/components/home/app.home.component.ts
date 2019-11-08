@@ -7,20 +7,18 @@ import { NewsElement } from 'src/app/models/database/news.element';
   templateUrl: './app.home.component.html',
   styleUrls: ['./app.home.component.css']
 })
-export class HomeComponent {
-/*
+export class HomeComponent implements OnInit {
+
   newsGroup: NewsElement[];
 
   constructor(private newsService: NewsService) {
 
   }
 
-  smallerThan3(index: number)
-  {
-    if(index < 1){
+  smallerThan3(index: number) {
+    if (index < 1) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
@@ -54,5 +52,5 @@ export class HomeComponent {
       }
     );
   }
-  */
+
 }

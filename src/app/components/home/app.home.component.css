@@ -60,34 +60,11 @@
 .text .cards {
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 3.5%;
+  padding-top: 3.25%;
   width: 75%;
   height: auto;
 
   float: right;
-}
-
-#banner .finance {
-  z-index: 15;
-  position: absolute;
-
-  bottom: 4%;
-  right: 2.5%;
-}
-
-.finance h3{
-  float: left;
-  color: white;
-  margin-right: 1vw;
-  margin-top: 10%;
-
-  font-size: 1.35vw;
-  text-align: center;
-}
-
-.finance img {
-  float: right;
-  width: 5.5vw;
 }
 
 .cards .news {
@@ -107,6 +84,10 @@
 
 .news a {
   text-decoration: none !important;
+}
+
+.news img {
+  max-height: 13vw;
 }
 
 .cards .news:hover {

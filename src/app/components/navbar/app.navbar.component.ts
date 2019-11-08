@@ -54,8 +54,8 @@ export class NavbarComponent {
     // in a real application, make a request to a remote url with the query and return filtered results, for demo we filter at client side
     const filtered: any[] = [];
     for (let i = 0; i < elements.length; i++) {
-        let news = elements[i];
-        
+        const news = elements[i];
+
         if ( news.name.toLowerCase().indexOf(query.toLowerCase()) === 0 ||
              news.publish_date.toLowerCase().indexOf(query.toLowerCase()) === 0 ||
              String(news.num).toLowerCase().indexOf(query.toLowerCase()) === 0 ||
@@ -68,7 +68,7 @@ export class NavbarComponent {
             } else if (news.noMonth) {
               news.publish_date = news.publish_date.substring(0, 4) + '-00-' + news.publish_date.substring(8, 10);
             }
-            
+
             news.name = news.publish_date + ' ' + elements[i].name + ' - Nr.' + elements[i].num + ' Pg.' + elements[i].page ;
 
             filtered.push(news);
@@ -78,7 +78,7 @@ export class NavbarComponent {
   }
 
   showNews(){
-    if(this.searchedNews) {
+    if (this.searchedNews) {
       window.location.href = this.searchedNews.href;
     }
   }
@@ -111,7 +111,7 @@ export class NavbarComponent {
 
       // non-main pages look ugly with transparent navbar
       if (!this.mainPage) {
-        this.bgopacity = 1;
+        this.bgopacity = 0.9;
       }
     }
   }

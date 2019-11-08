@@ -6,8 +6,7 @@
         <div class="text">
             <div class="description">{{ 'home.description.text' | translate}}</div>
             <div class="title">{{ 'home.description.title' | translate}}</div>
-            <!--<div class="cards">
-                Displays all news with id <= 3
+            <div class="cards">
                 <div *ngFor="let item of newsGroup, index as i">
                     <div *ngIf="smallerThan3(i)" class="news">
                         <a href="{{item.href}}" >
@@ -15,14 +14,14 @@
                             [style]="{width: '100%', 'color':'white', 'background':'rgba(79,54,34,0.8)'}"
                             class="card-style" styleClass="ui-card-shadow">
                                 <p-header>
-                                    <img src="{{item.img}}">
+                                    <img src="{{'../../../assets/doc/news/' + item.name + ';' + item.category + ';' + item.language + '/antet.jpg'}}">
                                 </p-header>
                                 <p>{{item.description}}</p>
                             </p-card>
                         </a>
                     </div>
                 </div>
-            </div>-->
+            </div>
         </div>
 
         <div class="finance">

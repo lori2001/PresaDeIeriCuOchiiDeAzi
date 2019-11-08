@@ -1,0 +1,62 @@
+<app-navbar *ngIf="this.selectionStage != 3"></app-navbar>
+<app-navbar [mainPage] = 'false' *ngIf="this.selectionStage === 3"></app-navbar>
+
+<div *ngIf="this.selectionStage != 3" class="bg"></div>
+<section id="press">
+    
+    <!--PAGE 0-->
+    <div *ngIf="this.selectionStage === 0" class="category">
+        <div class="wrapper grid-container-{{categories.length}}">
+            <div *ngFor="let item of categories" class="grid-item">
+                <p-button (click)="filterCategory(item)" >
+                    <div class="button">{{ 'press.press-' + item | translate}}</div>
+                </p-button>
+            </div>
+        </div>
+    </div>
+    <!--PAGE 1-->
+    <div *ngIf="this.selectionStage === 1" class="languages">
+        <div class="wrapper grid-container-{{languages.length}}">
+            <div *ngFor="let item of languages" class="grid-item">
+                <p-button (click)="filterLanguage(item)" >
+                    <div class="button">{{ 'press.' + item  | translate}}</div>
+                </p-button>
+            </div>
+        </div>
+    </div>
+    <!--PAGE 2-->
+    <div *ngIf="this.selectionStage === 2" class="publishes">
+        <div class="container">
+            <div class="center">
+                <a class="card-container" *ngFor="let item of filteredNewsGroup">
+                    <p-card header="{{item.name}}" (click)="filterPublishes(item.name)" 
+                    [style]="{width:'100%', 'color':'white', 'text-align': 'center', 'background':'rgba(79,54,34,0.95)'}"
+                     styleClass="ui-card-shadow">
+                        <p-header>
+                            <img src="{{'../../../assets/doc/news/' + item.name + ';' + item.category + ';' + item.language + '/antet.jpg'}}">
+                        </p-header>
+                    </p-card>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--PAGE 3-->
+    <div *ngIf="this.selectionStage === 3" class="news">
+        <h1 style="width: 100%; text-align: center; color:white;">{{this.selectedName}}</h1>
+        <div class="button-element" *ngFor="let item of filteredNewsGroup">
+            <a href="{{item.href}}">
+                <p-button>
+                    <div class="button">{{ item.publish_date + ' ' + item.description + ' nr.' + item.num + ' pg.' + item.page }}</div>
+                </p-button>
+            </a>
+        </div>
+    </div>
+    
+    <!--OVERLAY-->
+    <div *ngIf="this.selectionStage != 3" class="finance">
+        <h3>{{ 'home.description.finance' | translate}}</h3>
+        <img src="../../../assets/images/AFCN.jpg" alt="AFCN Logo">
+    </div>
+
+</section>
+<app-footer *ngIf="this.selectionStage === 3"></app-footer>

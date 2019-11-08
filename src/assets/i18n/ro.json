@@ -4,8 +4,7 @@
         "about": "Despre",
         "team": "Echipă",
         "raports": "Rapoarte",
-        "sibiuPress": "Presa sibiană",
-        "brasovPress": "Presa brașoveană",
+        "press": "Presa de ieri",
         "search": "Căutare Gazete"
     },
 
@@ -39,36 +38,33 @@
         "team": {
             "title" : "Echipă",
             "molnar-stefania": {
-                "name": "dr. Molnár Stefánia",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+                "name": "dr. Molnár Stefánia"
             },
             "molnar-csaba": {
-                "name": "prof. Molnár Csaba",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+                "name": "prof. Molnár Csaba"
             },
             "konya-ecaterina": {
-                "name": "ec. Kónya Ecaterina",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+                "name": "ec. Kónya Ecaterina"
             },
             "ambrus-attila": {
-                "name": "Ambrus Attila",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+                "name": "Ambrus Attila"
             },
             "cornel-maria": {
-                "name": "dr. Cornel-Mihai Maria",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+                "name": "dr. Cornel-Mihai Maria"
             },
             "mihaela-grancea": {
-                "name": "prof. univ. dr. Mihaela Grancea",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum nibh vitae mi convallis, sit amet accumsan mauris lobortis. Nulla nec placerat nisl, sed consequat erat. Integer gravida, dui sit amet ultrices cursus, "
+                "name": "prof. univ. dr. Mihaela Grancea"
             }
         }
     },
 
     "press": {
-        "romanian" : "Română",
-        "hungarian" : "Maghiară",
-        "german": "Germană"
+        "press-sb" : "Presa sibiană",
+        "press-bv" : "Presa brasoveană",
+
+        "ro" : "Română",
+        "hu" : "Maghiară",
+        "de": "Germană"
     } ,
 
     "not-found": {

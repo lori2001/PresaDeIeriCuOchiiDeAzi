@@ -46,3 +46,27 @@ html {
     line-height: 1;
     background-color: #2B2B2B;
   }
+
+/*Used  on more than one page CSS-es*/
+  .finance {
+    z-index: 15;
+    position: absolute;
+  
+    bottom: 4%;
+    right: 2.5%;
+  }
+  
+  .finance h3{
+    float: left;
+    color: white;
+    margin-right: 1vw;
+    margin-top: 14%;
+  
+    font-size: 1.35vw;
+    text-align: center;
+  }
+  
+  .finance img {
+    float: right;
+    width: 7vw;
+  }
