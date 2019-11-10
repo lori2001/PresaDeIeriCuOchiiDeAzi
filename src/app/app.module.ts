@@ -6,10 +6,11 @@ import { FormsModule } from '@angular/forms';
 // primeng
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import {CarouselModule} from 'primeng/carousel';
-import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {DropdownModule} from 'primeng/dropdown';
+
+// owl-carousel
+import { OwlModule } from 'ngx-owl-carousel';
 
 // import ngx-translate and the http loader
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -66,10 +67,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     // primeng
      ButtonModule,
      CardModule,
-     CarouselModule,
-     VirtualScrollerModule,
      AutoCompleteModule,
      DropdownModule,
+
+     // owl-carousel
+     OwlModule,
 
      // font awesome
      AngularFontAwesomeModule,

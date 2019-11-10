@@ -40,7 +40,7 @@ export class PressComponent implements OnInit  {
         }
 
         // gets all possible categories
-        let addedCategories: string[] = [' ']; // avoids adding category button 1000 times
+        const addedCategories: string[] = [' ']; // avoids adding category button 1000 times
         for (const item of this.newsGroup) {
           let shouldPush = true;
 
@@ -78,7 +78,7 @@ export class PressComponent implements OnInit  {
     this.filteredNewsGroup = []; // clear filteredGroup
     this.selectedCategory = category; // sets filter
 
-    let addedLanguages: string[] = [' ']; // avoids adding language button 1000 times
+    const addedLanguages: string[] = [' ']; // avoids adding language button 1000 times
     for (const item of this.newsGroup) {
       if (item.category === this.selectedCategory) {
 
@@ -104,7 +104,7 @@ export class PressComponent implements OnInit  {
     this.filteredNewsGroup = []; // clear filteredGroup
     this.selectedLanguage = language; // sets filter
 
-    let addedNewsNames: string[] = [' ']; // avoids adding a news page 1000 times
+    const addedNewsNames: string[] = [' ']; // avoids adding a news page 1000 times
     for (const item of this.newsGroup) {
       if (item.language === this.selectedLanguage && item.category === this.selectedCategory) {
 

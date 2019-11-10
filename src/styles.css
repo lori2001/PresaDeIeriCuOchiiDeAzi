@@ -52,7 +52,7 @@ html {
     z-index: 15;
     position: absolute;
   
-    bottom: 4%;
+    bottom: 2.25%;
     right: 2.5%;
   }
   
@@ -68,5 +68,18 @@ html {
   
   .finance img {
     float: right;
-    width: 7vw;
+    width: 6.75vw;
+  }
+
+  .sponsors {
+    z-index: 15;
+    position: absolute;
+  
+    bottom: 3.7%;
+    left: 2.5%;
+  }
+
+  .sponsors img {
+    float: right;
+    width: 13vw;
   }

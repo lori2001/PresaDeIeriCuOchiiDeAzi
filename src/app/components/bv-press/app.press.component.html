@@ -42,7 +42,7 @@
     </div>
     <!--PAGE 3-->
     <div *ngIf="this.selectionStage === 3" class="news">
-        <h1 style="width: 100%; text-align: center; color:white;">{{this.selectedName}}</h1>
+        <h1>{{this.selectedName}}</h1>
         <div class="button-element" *ngFor="let item of filteredNewsGroup">
             <a href="{{item.href}}">
                 <p-button>
@@ -53,9 +53,15 @@
     </div>
     
     <!--OVERLAY-->
-    <div *ngIf="this.selectionStage != 3" class="finance">
-        <h3>{{ 'home.description.finance' | translate}}</h3>
-        <img src="../../../assets/images/AFCN.jpg" alt="AFCN Logo">
+    <div *ngIf="this.selectionStage != 3">
+        <div class="finance">
+            <h3>{{ 'home.description.finance' | translate}}</h3>
+            <img src="../../../assets/images/afcn.jpg" alt="AFCN Logo">
+        </div>
+
+        <div class="sponsors">
+            <img src="../../../assets/images/brassoi-lapok.jpg" alt="Brassoi Lapok Logo">
+        </div>
     </div>
 
 </section>
