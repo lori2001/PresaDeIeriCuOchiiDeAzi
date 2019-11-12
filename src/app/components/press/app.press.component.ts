@@ -75,7 +75,7 @@ export class PressComponent implements OnInit  {
   // STAGE 0
   filterCategory(category: string) {
     this.selectionStage = 1; // next selection stage(changes layout)
-    this.filteredNewsGroup = []; // clear filteredGroup
+    this.languages = []; // clear languages
     this.selectedCategory = category; // sets filter
 
     const addedLanguages: string[] = [' ']; // avoids adding language button 1000 times

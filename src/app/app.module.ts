@@ -31,7 +31,7 @@ import { NotFoundComponent } from './components/not-found/app.not-found.componen
 
 // font awesome
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { PressComponent } from './components/bv-press/app.press.component';
+import { PressComponent } from './components/press/app.press.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);

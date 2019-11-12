@@ -3,6 +3,21 @@
 
 <div *ngIf="this.selectionStage != 3" class="bg"></div>
 <section id="press">
+
+    <div class="back-links">
+        <a class="link" *ngIf="this.selectionStage >= 1" (click)="this.selectionStage = 0">
+            <i class="fa fa-chevron-right"></i>
+            {{ 'press.press-' + this.selectedCategory | translate}}
+        </a>
+        <a class="link" *ngIf="this.selectionStage >= 2" (click)="filterCategory(this.selectedCategory)">
+            <i class="fa fa-chevron-right"></i>
+            {{ 'press.' + this.selectedLanguage  | translate}}
+        </a>
+        <a class="link" *ngIf="this.selectionStage >= 3" (click)="filterLanguage(this.selectedLanguage)">
+            <i class="fa fa-chevron-right"></i>
+            {{this.selectedName}}
+        </a>
+    </div>
     
     <!--PAGE 0-->
     <div *ngIf="this.selectionStage === 0" class="category">
@@ -42,13 +57,19 @@
     </div>
     <!--PAGE 3-->
     <div *ngIf="this.selectionStage === 3" class="news">
-        <h1>{{this.selectedName}}</h1>
-        <div class="button-element" *ngFor="let item of filteredNewsGroup">
-            <a href="{{item.href}}">
-                <p-button>
-                    <div class="button">{{ item.publish_date + ' ' + item.description + ' nr.' + item.num + ' pg.' + item.page }}</div>
-                </p-button>
-            </a>
+
+        <div class="news-bg">
+            <h1>{{this.selectedName}}</h1>
+        </div>
+
+        <div class="wrapper">
+            <div class="button-element" *ngFor="let item of filteredNewsGroup">
+                <a href="{{item.href}}">
+                    <p-button>
+                        <div class="button">{{ item.publish_date + ' ' + item.description + ' nr.' + item.num + ' pg.' + item.page }}</div>
+                    </p-button>
+                </a>
+            </div>
         </div>
     </div>
     

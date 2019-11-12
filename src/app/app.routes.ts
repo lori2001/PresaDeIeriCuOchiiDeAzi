@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 // Page Components
 import { HomeComponent } from './components/home/app.home.component';
 import { NotFoundComponent } from './components/not-found/app.not-found.component';
-import { PressComponent } from './components/bv-press/app.press.component';
+import { PressComponent } from './components/press/app.press.component';
 
 const routes: Routes = [
     {path : 'home', component : HomeComponent},
