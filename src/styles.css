@@ -56,19 +56,9 @@ html {
     right: 2.5%;
   }
   
-  .finance h3{
-    float: left;
-    color: white;
-    margin-right: 1vw;
-    margin-top: 14%;
-  
-    font-size: 1.35vw;
-    text-align: center;
-  }
-  
   .finance img {
     float: right;
-    width: 6.75vw;
+    width: 9vw;
   }
 
   .sponsors {

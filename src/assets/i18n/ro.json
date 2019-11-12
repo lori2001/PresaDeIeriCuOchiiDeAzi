@@ -12,8 +12,7 @@
 
         "description":{
             "title": "Presa de ieri cu ochii de azi",
-            "text": "Binomul identitate-alteritate în presa brașoveană și sibiană din a doua jumătate a secolului al XIX-lea și începutul secolului al XX-lea",
-            "finance": "proiect co-finanțat de"
+            "text": "Binomul identitate-alteritate în presa brașoveană și sibiană din a doua jumătate a secolului al XIX-lea și începutul secolului al XX-lea"
         },
         
         "about": {
@@ -38,7 +37,7 @@
         "team": {
             "title" : "Echipă",
             "molnar-stefania": {
-                "name": "dr. Molnár Stefánia"
+                "name": "prof. dr. Molnár Stefánia"
             },
             "molnar-csaba": {
                 "name": "prof. Molnár Csaba"
@@ -60,7 +59,7 @@
 
     "press": {
         "press-sb" : "Presa sibiană",
-        "press-bv" : "Presa brasoveană",
+        "press-bv" : "Presa brașoveană",
 
         "ro" : "Română",
         "hu" : "Maghiară",
