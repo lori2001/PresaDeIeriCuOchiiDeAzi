@@ -258,3 +258,51 @@
   left: 15px;
   right: 15px;
 }
+
+#raports {
+  text-align: center;
+  padding: 20px 200px;
+
+  width: 100%;
+}
+
+#raports h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+#raports .container {
+  text-align: center;  
+}
+
+#raports .row {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+#raports .col {
+  text-align: center;
+}
+
+#raports h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+
+  font-size: 1.45vw;
+}
+
+#raports img {
+  margin: 0 auto;
+
+  width: 40%;
+  height: auto;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+#raports img:hover {
+  transform: scale(1.2);
+}

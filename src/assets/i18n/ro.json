@@ -54,7 +54,14 @@
             "mihaela-grancea": {
                 "name": "prof. univ. dr. Mihaela Grancea"
             }
+        },
+
+        "raports": {
+            "title" : "Rapoarte",
+            "press-sb" : "Cercetare presa sibiană",
+            "press-bv" : "Cercetare presa brașoveană"
         }
+
     },
 
     "press": {

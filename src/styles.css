@@ -47,6 +47,13 @@ html {
     background-color: #2B2B2B;
   }
 
+  a {
+    text-decoration: none !important;
+  }
+  a:focus {
+    outline:0 !important;
+  }
+
 /*Used  on more than one page CSS-es*/
   .finance {
     z-index: 15;
