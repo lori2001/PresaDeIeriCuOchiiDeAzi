@@ -4,6 +4,7 @@
         "about": "Despre",
         "team": "Echipă",
         "raports": "Rapoarte",
+        "media": "Media",
         "press": "Presa de ieri",
         "search": "Căutare Gazete"
     },
@@ -59,7 +60,12 @@
         "raports": {
             "title" : "Rapoarte",
             "press-sb" : "Cercetare presa sibiană",
-            "press-bv" : "Cercetare presa brașoveană"
+            "press-bv" : "Cercetare presa brașoveană",
+            "press-catalog": "Catalogul presei româno-maghiaro-germane"
+        },
+
+        "media" : {
+            "title" : "Apariții în media"
         }
 
     },

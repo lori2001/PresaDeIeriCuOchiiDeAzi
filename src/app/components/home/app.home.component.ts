@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
     };
 
     public newsSliderOPT: any = {
-      startPosition: 6,
+      startPosition: 1,
       margin: 10,
       dots: false,
       autoplay: true,

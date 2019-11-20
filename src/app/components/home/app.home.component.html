@@ -39,7 +39,7 @@
     </div>
 
     <div id="about">
-        <h1 class="title" style="color:white;">{{ 'home.about.title' | translate}}</h1>
+        <h1 style="color:white;">{{ 'home.about.title' | translate}}</h1>
         
         <div class="data">
             <img src="../../../assets/images/data.png" alt="Project Data">
@@ -66,7 +66,7 @@
         </div>
     </div>
 
-    <div id="team">
+  <div id="team" style="background-color: rgb(25, 25, 25);">
         <h1 style="color:white;">{{ 'home.team.title' | translate}}</h1>
 
 
@@ -86,7 +86,7 @@
     </div>
 
     <div id="raports">
-        <h1 class="title" style="color:white;">{{ 'home.raports.title' | translate}}</h1>
+        <h1 style="color:white;">{{ 'home.raports.title' | translate}}</h1>
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -101,8 +101,36 @@
                         <h5>{{ 'home.raports.press-sb' | translate}}</h5>
                     </a>
                 </div>
+                <div class="col">
+                        <a  href="../../../assets/doc/raports/Catalogul presei româno-maghiaro-germane.doc">
+                            <img src="../../../assets/images/word.png" alt="Word Icon PNG">
+                            <h5>{{ 'home.raports.press-catalog' | translate}}</h5>
+                        </a>
+                    </div>
             </div>
         </div>
+    </div>
+    
+
+    <div id="media" style="background-color: rgb(25, 25, 25);"> 
+        <h1 style="color:white;">{{ 'home.media.title' | translate}}</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <video width="100%" height="auto" controls poster="../../../assets/videos/MS1.jpg">
+                        <source src="../../../assets/videos/MS1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                </div>
+                <div class="col">
+                    <video width="100%" height="auto" controls poster="../../../assets/videos/MS2.jpg">
+                        <source src="../../../assets/videos/MS2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                </div>
+            </div>
+        </div>   
     </div>
 
 

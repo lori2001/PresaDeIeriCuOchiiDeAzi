@@ -51,7 +51,7 @@
   white-space: nowrap;
   text-align: center;
 
-  font-size: 2.8vw;
+  font-size: 3vw;
   color: white;
   font-family: TypewriterBold, Arial, Helvetica, sans-serif;
 }
@@ -66,7 +66,7 @@
 }
 
 #banner .cards, #banner .title {
-  padding-left: 9%;
+  padding-left: 4%;
   width: 70%;
 }
 
@@ -106,15 +106,15 @@
 
 #about {
   width: 100%;
-  padding: 60px 150px;
+  padding: 55px 150px;
   background-color: #2B2B2B;
 }
 
-#about .title {
+h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 55px;
 }
 
 #about .data {
@@ -207,16 +207,7 @@
 
 #team {
   width: 100%;
-  padding: 60px 100px;
-  background-color: rgb(25, 25, 25);
-}
-
-#team h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  
-  margin-bottom: 55px;
+  padding: 55px 150px;
 }
 
 #team h2 {
@@ -261,24 +252,15 @@
 
 #raports {
   text-align: center;
-  padding: 20px 200px;
+  padding: 0 200px;
+  padding-top: 55px;
+  padding-bottom: 30px;
 
   width: 100%;
 }
 
-#raports h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: center;
-}
-
 #raports .container {
   text-align: center;  
-}
-
-#raports .row {
-  padding-top: 30px;
-  padding-bottom: 15px;
 }
 
 #raports .col {
@@ -289,13 +271,13 @@
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 
-  font-size: 1.45vw;
+  font-size: 1.35vw;
 }
 
 #raports img {
   margin: 0 auto;
 
-  width: 40%;
+  width: 60%;
   height: auto;
 
   -webkit-transition: all .3s ease-in-out;
@@ -305,4 +287,10 @@
 }
 #raports img:hover {
   transform: scale(1.2);
+}
+
+#media {
+  margin: 0;
+
+  padding: 55px 150px;
 }
