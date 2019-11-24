@@ -82,6 +82,10 @@
     "not-found": {
         "text": "Ne pare rău",
         "subtext": "pagina cerută nu a fost găsită!"
+    },
+
+    "footer": {
+        "szoke-lorand":  "Szőke András-Loránd"
     }
 
 }

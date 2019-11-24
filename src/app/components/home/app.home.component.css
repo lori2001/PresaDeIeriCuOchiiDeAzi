@@ -291,6 +291,36 @@ h1 {
 
 #media {
   margin: 0;
+  width: 100%;
 
   padding: 55px 150px;
+}
+
+#media .container {
+  width: 100%;
+  max-width: none !important;
+  margin: 0;
+}
+
+#media .text {
+  padding-top: 40px;
+  text-align: center;
+}
+
+#media .text .row {
+  padding-bottom: 30px;
+}
+
+#media a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.65vw;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+#media a:hover {
+  color: rgb(255, 187, 0) !important; 
 }

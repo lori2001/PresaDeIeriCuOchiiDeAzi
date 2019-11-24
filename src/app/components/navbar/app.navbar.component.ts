@@ -1,4 +1,4 @@
-import { Component, HostListener, ElementRef, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import { NewsService } from 'src/app/services/news.service';
 
