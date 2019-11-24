@@ -61,7 +61,12 @@
             "title" : "Rapoarte",
             "press-sb" : "Cercetare presa sibiană",
             "press-bv" : "Cercetare presa brașoveană",
-            "press-catalog": "Catalogul presei româno-maghiaro-germane"
+            "press-catalog": "Catalogul presei româno-maghiaro-germane",
+            "then-now": "Ieri si azi, românii despre sași",
+            "imaginarul": "Imaginarul ident alterit",
+            "list": "Lista articole cercetate",
+            "press-de1" : "Raport de cercetare presa germană",
+            "press-de2" : "Raport de cercetare presa germană 2"
         },
 
         "media" : {
