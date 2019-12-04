@@ -55,24 +55,38 @@ html {
   }
 
 /*Used  on more than one page CSS-es*/
-  .finance {
+  .finance .icon {
     z-index: 15;
     position: absolute;
   
-    bottom: 2.25%;
+    bottom: 4.5%;
     right: 2.5%;
   }
   
-  .finance img {
+  .finance .icon img {
     float: right;
     width: 9vw;
+  }
+
+  .finance p {
+    position: absolute;
+    bottom: 1.5%;
+    right: 2%;
+    left: 2%;
+    width: 96%;
+
+    text-align: center;
+    color: whitesmoke;
+    font-size: 0.76vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .sponsors {
     z-index: 15;
     position: absolute;
   
-    bottom: 3.7%;
+    bottom: 4.7%;
     left: 2.5%;
   }
 

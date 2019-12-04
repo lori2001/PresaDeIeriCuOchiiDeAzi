@@ -66,7 +66,10 @@
             "imaginarul": "Imaginarul ident alterit",
             "list": "Lista articole cercetate",
             "press-de1" : "Raport de cercetare presa germană",
-            "press-de2" : "Raport de cercetare presa germană 2"
+            "press-de2" : "Raport de cercetare presa germană 2",
+            "a3": "Afiș A3",
+            "a4": "Afiș A4",
+            "a4release": "Publicatie A4"
         },
 
         "media" : {
@@ -91,6 +94,10 @@
 
     "footer": {
         "szoke-lorand":  "Szőke András-Loránd"
+    },
+
+    "finance" : {
+        "description" : "„Proiectul nu reprezintă în mod necesar poziţia Administrației Fondului Cultural Național. AFCN nu este responsabilă de conținutul proiectului sau de modul în care rezultatele proiectului pot fi folosite. Acestea sunt în întregime responsabilitea beneficiarului finațării.”"
     }
 
 }
