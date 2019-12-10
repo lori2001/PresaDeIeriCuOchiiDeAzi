@@ -29,10 +29,11 @@ export class NavbarComponent {
       this.calcOpacity();
     }
   }
+
   width = '100%'; // background width
   bgopacity = 0; // background opacity
 
-  mobileMode = false; // enables/disables mobile mode
+  mode = 'desktop'; // desktop tablet mobile
   collapse = true; // true if mobile style menu is collapsed
 
   private _mainPage = true; // checks and behaves differently whether the user is on main page or not
@@ -86,21 +87,25 @@ export class NavbarComponent {
   @HostListener('window:resize', ['$event'])
   checkMobileMode() {
     if ( window.innerWidth < 768) {
-      this.mobileMode = true; // enables mobile mode
+      this.mode = 'mobile'; // enables mobile mode
       this.bgopacity = 0; // no background as default
       this.collapse = true; // resolves a bug on mobile
       this.width = '200px'; // width when shown
-    } else {
-      this.mobileMode = false; // disables mobile mode
-
+    }
+    else if(window.innerWidth < 1200) {
+      this.mode = 'tablet'; // enables tablet mode
+      this.width = '100%'; // max width
+      this.calcOpacity(); // controls this.bgopacity
+    }
+    else {
+      this.mode = 'desktop'; // enables desktop mode
       this.width = '100%'; // max width
       this.calcOpacity(); // controls this.bgopacity
     }
   }
   @HostListener('window:scroll', ['$event'])
   calcOpacity() {
-    if (!this.mobileMode) {
-
+    if (this.mode != 'mobile') {
       // calculates the background opacity
       this.bgopacity = window.pageYOffset / window.innerHeight;
 
@@ -118,7 +123,7 @@ export class NavbarComponent {
 
   toggleNavbar() {
     // navbar toggle shows only in mobile mode
-    if (this.mobileMode) {
+    if (this.mode === 'mobile') {
     this.collapse = !this.collapse;
 
       if (!this.collapse) {

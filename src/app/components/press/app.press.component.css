@@ -15,7 +15,7 @@
 
 .bg{
   position: absolute;
-  top: 0; left: 0;
+  top: -4px; left: -4px;
   
   background-image: url("./../../../assets/images/conference.jpg");
 
@@ -28,7 +28,7 @@
 
   width: 100%;
   height: 100vh;
-  
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

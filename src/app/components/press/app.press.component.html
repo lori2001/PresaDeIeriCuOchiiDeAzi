@@ -76,7 +76,10 @@
     <!--OVERLAY-->
     <div *ngIf="this.selectionStage != 3">
         <div class="finance">
-            <img src="../../../assets/images/afcn.jpg" alt="AFCN Logo">
+            <p>{{ 'finance.description' | translate}}</p>
+            <div class="icon">
+                <img src="../../../assets/images/afcn.jpg" alt="AFCN Logo">
+            </div>
         </div>
 
         <div class="sponsors">

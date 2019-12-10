@@ -1,34 +1,36 @@
 /*navbar width and bg-color controlled by typescript*/
-.navbar{
+#navbar{
   position: fixed;
   z-index: 100;
 
-  height: 50px;
-
   width: 100%;
+  height: 50px;
   white-space: nowrap;
-  padding: 0 50px;
 }
 
-.navbar-nav{
-  font-size: 16px;
-  font-family: arialBlack, Gadget, sans-serif;
-
-  /* center align the menu */
-  margin: 0 auto;
+#navbar img {
+  margin-top: 5px;
+  height: 40px;
+  width: auto;
 }
 
-/* Links */
-.navbar-nav a{
-/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+#navbar .link {
+  height: auto;
+  padding-top: 5px;
+}
+
+#navbar .searchbar {
+  width: 20vw;
+  padding-top: 4px;
+}
+
+#navbar a{
   border: none;
   background: none;
-  display: inline-block;
-  padding-top: 7px;
-  margin: 0 15px;
-  text-decoration: none;
-  text-align: left;
   color: white;
+
+  font-family: arialBlack, Gadget, sans-serif;
+  font-size: 16px;
 
   -webkit-transition: color .2s ease-in-out;
   -moz-transition: color .2s ease-in-out;
@@ -36,15 +38,39 @@
   -ms-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
-.navbar-nav a:hover, .navbar-nav .active-link { 
+#navbar a:hover, .navbar-nav .active-link { 
   color: rgb(255, 187, 0) !important; 
   cursor:pointer;
 }
-/*hides outline when on focus*/
-.navbar-nav:focus{
+#navbar a:focus{
   outline: none;
 }
 
+@media screen and (min-width: 1200px){
+  #navbar .link {
+    margin: 0 0.75vw;
+  }
+  #navbar .searchbar {
+    margin-left: 1.1vw;
+  }
+  #navbar img {
+    margin-right: 1.1vw;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1199px) {
+  #navbar .link {
+    margin: 0 1.5vw;
+  }
+  #navbar .searchbar {
+    margin-left: 1.1vw;
+  }
+  #navbar img {
+    margin-right: 1.1vw;
+  }
+}
+
+
+/*
 .logo {
   height: 30px;
   width: auto;
@@ -69,7 +95,6 @@
   height: 30px;
   background-color: rgb(110, 62, 22); 
 }
-/*hides outline when on focus*/
 .navbar-toggler:focus {
   outline: none;
 }
@@ -78,10 +103,7 @@
   background-color: white !important;
   color: black !important;
 }
-/*
-::ng-deep body .ui-autocomplete-panel {
-  background-color: white !important;
-}*/
+*/
 
 /* Normal mode 
 @media screen and (min-width: 768px){
