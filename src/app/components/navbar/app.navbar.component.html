@@ -1,33 +1,41 @@
-<nav class="navbar navbar-expand-md" [ngStyle]="{'background-color': 'rgba(79,54,34,'+ (bgopacity) +')', 'width' : width}">
-    <button class="navbar-toggler" (click)="toggleNavbar()" type="button" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="toggler fa fa-bars"></span>
-    </button>
-  
-    <div class="navbar-collapse" (click)="toggleNavbar()" [hidden]="collapse">
-      <ul class="navbar-nav mr-auto">
-            <img *ngIf="this.mobileMode === false" [routerLink]="['/home']"
-            class="logo" src="assets/images/logo.png" alt="Website Logo">
-
-            <a [routerLink]="['/home']" [ngx-scroll-to]="'#banner'" routerLinkActive="active-link">{{ 'navbar.home' | translate }}</a>
-            <a [routerLink]="['/home']" [ngx-scroll-to]="'#about'">{{ 'navbar.about' | translate }}</a>
-            <a [routerLink]="['/home']" [ngx-scroll-to]="'#team'">{{ 'navbar.team' | translate }}</a>
-            <a [routerLink]="['/home']" [ngx-scroll-to]="'#raports'">{{ 'navbar.raports' | translate }}</a>
-            <a [routerLink]="['/home']" [ngx-scroll-to]="'#media'">{{ 'navbar.media' | translate }}</a>
-            <a [routerLink]="['/press']" routerLinkActive="active-link">{{ 'navbar.press' | translate }}</a>
-
-            <div class="layout-menu-search ui-fluid" style="margin-left: 4%;">
-                <p-autoComplete
-                [(ngModel)]="searchedNews"
-                (keyup.enter)="showNews()"
-                [suggestions]="filteredNewsGroupSingle"
-                (completeMethod)="filterNewsSingle($event)"
-                [forceSelection]="true"
-                field="name"
-                [size]="35"
-                placeholder="{{ 'navbar.search' | translate }}"
-                [minLength]="1">
-                </p-autoComplete>
-            </div>
-      </ul>
+<div id="navbar" *ngIf="this.mode === 'desktop' || this.mode === 'tablet'"
+     [ngStyle]="{'background-color': 'rgba(79,54,34,'+ (bgopacity) +')'}">
+  <div class="container">
+    <div class="row justify-content-center">
+      <img *ngIf="this.mode === 'desktop'" [routerLink]="['/home']" class="logo" src="assets/images/logo.png" alt="Website Logo">
+      <div class="link my-auto">
+        <a [routerLink]="['/home']" [ngx-scroll-to]="'#banner'" routerLinkActive="active-link">{{ 'navbar.home' | translate }}</a>
+      </div>
+      <div class="link my-auto">
+        <a [routerLink]="['/home']" [ngx-scroll-to]="'#about'">{{ 'navbar.about' | translate }}</a>
+      </div>
+      <div class="link my-auto">
+        <a [routerLink]="['/home']" [ngx-scroll-to]="'#team'">{{ 'navbar.team' | translate }}</a>
+      </div>
+      <div class="link my-auto">
+        <a [routerLink]="['/home']" [ngx-scroll-to]="'#raports'">{{ 'navbar.raports' | translate }}</a>
+      </div>
+      <div class="link my-auto">
+        <a [routerLink]="['/home']" [ngx-scroll-to]="'#media'">{{ 'navbar.media' | translate }}</a>
+      </div>
+      <div class="link my-auto">
+        <a [routerLink]="['/press']" routerLinkActive="active-link">{{ 'navbar.press' | translate }}</a>
+      </div>
+      <div class="searchbar my-auto">
+          <div class="layout-menu-search ui-fluid">
+              <p-autoComplete
+              [(ngModel)]="searchedNews"
+              (keyup.enter)="showNews()"
+              [suggestions]="filteredNewsGroupSingle"
+              (completeMethod)="filterNewsSingle($event)"
+              [forceSelection]="true"
+              field="name"
+              [size]="35"
+              placeholder="{{ 'navbar.search' | translate }}"
+              [minLength]="1">
+              </p-autoComplete>
+        </div>
+      </div>
     </div>
-  </nav>
+  </div>
+</div>
