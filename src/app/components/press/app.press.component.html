@@ -42,7 +42,7 @@
     <!--PAGE 2-->
     <div *ngIf="this.selectionStage === 2" class="publishes">
         <div class="container">
-            <div class="center">
+            <div class="center" [ngStyle]="{ 'grid-template-columns': this.publishesColumn}">
                 <a class="card-container" *ngFor="let item of filteredNewsGroup">
                     <p-card header="{{item.name}}" (click)="filterPublishes(item.name)" 
                     [style]="{width:'100%', 'color':'white', 'text-align': 'center', 'background':'rgba(79,54,34,0.95)'}"
@@ -63,12 +63,11 @@
         </div>
 
         <div class="wrapper">
+            <div *ngFor="let item of this.decadeFilter">
+
+            </div>
             <div class="button-element" *ngFor="let item of filteredNewsGroup">
-                <a href="{{item.href}}">
-                    <p-button>
-                        <div class="button">{{ item.publish_date + ' ' + item.description + ' nr.' + item.num + ' pg.' + item.page }}</div>
-                    </p-button>
-                </a>
+                <a href="{{item.href}}" class="item">{{ item.publish_date + ' ' + item.description + ' nr.' + item.num + ' pg.' + item.page }}</a>
             </div>
         </div>
     </div>
@@ -76,7 +75,10 @@
     <!--OVERLAY-->
     <div *ngIf="this.selectionStage != 3">
         <div class="finance">
-            <img src="../../../assets/images/afcn.jpg" alt="AFCN Logo">
+            <p>{{ 'finance.description' | translate}}</p>
+            <div class="icon">
+                <img src="../../../assets/images/afcn.jpg" alt="AFCN Logo">
+            </div>
         </div>
 
         <div class="sponsors">
