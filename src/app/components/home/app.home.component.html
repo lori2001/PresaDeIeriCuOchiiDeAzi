@@ -5,7 +5,11 @@
 
         <div class="wrapper">
             <div class="description">{{ 'home.description.text' | translate}}</div>
-            <div class="title">{{ 'home.description.title' | translate}}</div>
+            <div *ngIf="this.mode !== 'mobile'" class="title">{{ 'home.description.title' | translate}}</div>
+            <div *ngIf="this.mode === 'mobile'" class="title">
+                {{ 'home.description.splitTitle.split1' | translate}}<br>
+                {{ 'home.description.splitTitle.split2' | translate}}
+            </div>
             <div class="cards">
                 <owl-carousel
                     [options]="newsSliderOPT"
@@ -44,7 +48,7 @@
     <div id="about">
         <h1 style="color:white;">{{ 'home.about.title' | translate}}</h1>
         
-        <div class="data">
+        <div class="datablock">
             <img src="../../../assets/images/data.png" alt="Project Data">
             <div class="txt">
                 <h2>{{ 'home.about.data.title' | translate}}</h2>
@@ -52,16 +56,16 @@
             </div>
         </div>
 
-        <div class="target">
-            <img src="../../../assets/images/target.png" alt="Project Target">
+        <div class="datablock">
+            <img src="../../../assets/images/target.png" class="target" alt="Project Target">
             <div class="txt">
                 <h2>{{ 'home.about.target.title' | translate}}</h2>
                 <p>{{ 'home.about.target.text' | translate}}</p>
             </div>
         </div>
 
-        <div class="activities">
-            <img src="../../../assets/images/typewriter.png" alt="Activities">
+        <div class="datablock">
+            <img src="../../../assets/images/typewriter.png" class="activities" alt="Activities">
             <div class="txt">
                 <h2>{{ 'home.about.activities.title' | translate}}</h2>
                 <p>{{ 'home.about.activities.text' | translate}}</p>

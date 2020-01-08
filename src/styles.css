@@ -59,7 +59,7 @@ html {
     z-index: 15;
     position: absolute;
   
-    bottom: 4.5%;
+    bottom: 5%;
     right: 2.5%;
   }
   
@@ -87,11 +87,78 @@ html {
     z-index: 15;
     position: absolute;
   
-    bottom: 4.7%;
+    bottom: 5.2%;
     left: 2.5%;
   }
 
   .sponsors img {
     float: right;
     width: 13vw;
+  }
+
+  @media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .finance p {
+      font-size: 0.85vw;
+      white-space: normal;
+      bottom: 2%;
+    }
+    .sponsors {
+      bottom: 8%;
+    }
+    .finance .icon {
+      bottom: 7%;
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1000px) {
+    .finance p {
+      font-size: 1vw;
+      white-space: normal;
+      bottom: 2%;
+    }
+    .sponsors {
+      bottom: 8%;
+    }
+    .finance .icon {
+      bottom: 7%;
+    }
+  }
+  @media screen and (min-width: 569px) and (max-width: 768px) {
+    .sponsors {
+      bottom: 12%;
+      left: 18%;
+    }
+    .sponsors img {
+      width: 27vw;
+    }
+    .finance .icon {
+      bottom: 9.3%;
+      right: 18%;
+    }
+    .finance .icon img {
+      width: 16.5vw;
+    }
+    .finance p {
+      white-space: normal;
+      font-size: 1.9vw;
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 568px) {
+    .sponsors {
+      bottom: 14.5%;
+      left: 18%;
+    }
+    .sponsors img {
+      width: 32vw;
+    }
+    .finance .icon {
+      bottom: 11.3%;
+      right: 18%;
+    }
+    .finance .icon img {
+      width: 20vw;
+    }
+    .finance p {
+      white-space: normal;
+      font-size: 2.3vw;
+    }
   }

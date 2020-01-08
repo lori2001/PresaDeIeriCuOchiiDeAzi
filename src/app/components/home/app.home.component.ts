@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/services/news.service';
 import { NewsElement } from 'src/app/models/database/news.element';
 
@@ -10,6 +10,7 @@ import { NewsElement } from 'src/app/models/database/news.element';
 export class HomeComponent implements OnInit {
 
   filteredNewsGroup: NewsElement[] = [];
+  mode = 'desktop';
 
   team: string[] = ['ambrus-attila',
                     'mihaela-grancea',
@@ -19,10 +20,24 @@ export class HomeComponent implements OnInit {
                     'konya-ecaterina'];
 
   constructor(private newsService: NewsService) {
-
+    this.checkMode();
+    console.log(this.mode);
   }
 
     /*owl carousel options from https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html */
+
+    public newsSliderOPT: any = {
+      startPosition: 1,
+      margin: 10,
+      dots: false,
+      autoplay: false,
+      autoplayTimeout: 4000,
+      autoplaySpeed: 1000,
+      loop: true,
+      autoplayHoverPause: true,
+      items: 1
+    };
+
     public teamSliderOPT: any = {
       dots: false,
       autoplay: true,
@@ -44,18 +59,6 @@ export class HomeComponent implements OnInit {
               items: 4
           }
       }
-    };
-
-    public newsSliderOPT: any = {
-      startPosition: 1,
-      margin: 10,
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 4000,
-      autoplaySpeed: 1000,
-      loop: true,
-      autoplayHoverPause: true,
-      items: 1
     };
 
   ngOnInit() {
@@ -100,6 +103,17 @@ export class HomeComponent implements OnInit {
         }
       }
     );
+  }
+
+  @HostListener('window:resize', ['$event'])
+  checkMode() {
+    if (window.innerWidth > 1200) {
+      this.mode = 'desktop'; // enables desktop mode
+    } else if (window.innerWidth > 768) {
+      this.mode = 'tablet'; // enables tablet mode
+    } else {
+      this.mode = 'mobile'; // enables mobile mode
+    }
   }
 
 }

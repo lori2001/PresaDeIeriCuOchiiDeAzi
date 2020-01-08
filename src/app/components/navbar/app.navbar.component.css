@@ -1,30 +1,5 @@
-/*navbar width and bg-color controlled by typescript*/
-#navbar{
-  position: fixed;
-  z-index: 100;
-
-  width: 100%;
-  height: 50px;
-  white-space: nowrap;
-}
-
-#navbar img {
-  margin-top: 5px;
-  height: 40px;
-  width: auto;
-}
-
-#navbar .link {
-  height: auto;
-  padding-top: 5px;
-}
-
-#navbar .searchbar {
-  width: 20vw;
-  padding-top: 4px;
-}
-
-#navbar a{
+/*COMMON*/
+a{
   border: none;
   background: none;
   color: white;
@@ -38,101 +13,113 @@
   -ms-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
-#navbar a:hover, .navbar-nav .active-link { 
+a:hover, .navbar-nav .active-link { 
   color: rgb(255, 187, 0) !important; 
   cursor:pointer;
 }
-#navbar a:focus{
+a:focus{
   outline: none;
 }
 
-@media screen and (min-width: 1200px){
-  #navbar .link {
-    margin: 0 0.75vw;
-  }
-  #navbar .searchbar {
-    margin-left: 1.1vw;
-  }
-  #navbar img {
-    margin-right: 1.1vw;
-  }
-}
-@media screen and (min-width: 0px) and (max-width: 1199px) {
-  #navbar .link {
-    margin: 0 1.5vw;
-  }
-  #navbar .searchbar {
-    margin-left: 1.1vw;
-  }
-  #navbar img {
-    margin-right: 1.1vw;
-  }
+.container {
+  max-width: none !important;
 }
 
+/*DESKTOP AND TABLET*/
+/*navbar bg-color controlled by typescript*/
+#navbar-desktop, #navbar-tablet{
+  position: fixed;
+  z-index: 100;
 
-/*
-.logo {
-  height: 30px;
-  width: auto;
-  margin-right: 30px;
-
-  transform: scale(1.3);
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  width: 100%;
+  height: 50px;
+  white-space: nowrap;
 }
-.logo:hover {
-  transform: scale(1.6);
-  cursor: pointer;
-}
-
-.toggler {
-  border: none;
+#navbar-desktop .link, #navbar-tablet .link {
+  height: auto;
   padding-top: 5px;
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
-  background-color: rgb(110, 62, 22); 
 }
-.navbar-toggler:focus {
-  outline: none;
+#navbar-desktop .searchbar, #navbar-tablet .searchbar {
+  width: 20vw;
+  padding-top: 4px;
 }
 
-::ng-deep body .ui-inputtext {
-  background-color: white !important;
-  color: black !important;
-}
-*/
+/*DESKTOP*/
+#navbar-desktop img {
+  margin-top: 5px;
+  height: 40px;
+  width: auto;
 
-/* Normal mode 
-@media screen and (min-width: 768px){
-  .navbar-nav a{
-    line-height: initial;
-  }
-  .navbar-nav .pagemark {
-    border-bottom: 2px solid;
-    color: white;
-    border-color: white;
-    padding-bottom: 2px;
-    -webkit-transition: color .2s ease-in-out, border .2s ease-in-out;
-    -moz-transition: color .2s ease-in-out, border .2s ease-in-out;
-    -o-transition: color .2s ease-in-out, border .2s ease-in-out;
-    -ms-transition: color .2s ease-in-out, border .2s ease-in-out;
-    transition: color .2s ease-in-out, border .2s ease-in-out;
-  }
-  .navbar-nav .pagemark:hover { 
-    color: #4380BC !important; 
-    border-color: #4380BC !important;
-  }
+  -webkit-transition: transform .2s ease-in-out;
+  -moz-transition: transform .2s ease-in-out;
+  -o-transition: transform .2s ease-in-out;
+  -ms-transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
 }
-/* Mobile mode 
-@media screen and (min-width: 0px) and (max-width: 767px){
-  .navbar-nav a{
-    line-height: 25px;
-  }
-  .navbar-nav .pagemark {
-    margin-left: -5px;
-  }
+#navbar-desktop img:hover {
+  transform: scale(1.2);
 }
-*/
+#navbar-desktop .link {
+  margin: 0 0.75vw;
+}
+#navbar-desktop .searchbar {
+  margin-left: 1.1vw;
+}
+#navbar-desktop img {
+  margin-right: 1.1vw;
+}
+
+/*TABLET*/
+#navbar-tablet{
+  padding-top: 8px;
+}
+#navbar-tablet .link {
+  margin: 0 1.3vw;
+}
+#navbar-tablet .searchbar {
+  margin-left: 1.1vw;
+}
+
+/*MOBILE*/
+#navbar-mobile .link {
+  margin: 0 1.5vw;
+}
+#navbar-mobile .searchbar {
+  position: absolute;
+  left: 60px;
+  top: 18px;
+  width: 200px;
+}
+
+#navbar-mobile .toggler {
+  background-color: rgb(180, 114, 14);
+  border: none;
+  width: 35px;
+  height: 35px;
+  font-size: 23px;
+  text-align: center;
+}
+button:focus {
+  border: 1px solid black;
+}
+
+#navbar-mobile{
+  position: fixed;
+  z-index: 100;
+
+  width: 270px;
+  height: auto;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+#navbar-mobile .container{
+ padding-top: 10px;
+}
+
+#navbar-mobile .link {
+  width: 100%;
+  padding: 7.5px 0;
+  padding-left: 5px;
+}

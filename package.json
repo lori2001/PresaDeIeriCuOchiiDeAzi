@@ -1,13 +1,15 @@
 {
   "name": "presadeiericuochiideazi",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-prod-patch": "npm version patch; node ./replace.build.js; ng build --prod --base-href=./; node ./versioning.build.js",
+    "build-prod-no-patch": "node ./replace.build.js; ng build --prod --base-href=./; node ./versioning.build.js"
   },
   "private": true,
   "dependencies": {
@@ -31,12 +33,13 @@
     "ngx-owl-carousel": "^2.0.7",
     "primeicons": "^2.0.0",
     "primeng": "^8.0.2",
+    "replace-in-file": "^5.0.2",
     "rxjs": "~6.5.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.2",
+    "@angular-devkit/build-angular": "^0.803.21",
     "@angular/cli": "~8.3.2",
     "@angular/compiler-cli": "~8.2.4",
     "@angular/language-service": "~8.2.4",

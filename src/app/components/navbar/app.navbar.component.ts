@@ -30,11 +30,11 @@ export class NavbarComponent {
     }
   }
 
-  width = '100%'; // background width
   bgopacity = 0; // background opacity
 
   mode = 'desktop'; // desktop tablet mobile
-  collapse = true; // true if mobile style menu is collapsed
+  toggleOpen = false; // true if mobile style menu is open
+  toggleBlocker = false; // blocks collapsing right along if toggler button is pressed
 
   private _mainPage = true; // checks and behaves differently whether the user is on main page or not
 
@@ -86,26 +86,23 @@ export class NavbarComponent {
 
   @HostListener('window:resize', ['$event'])
   checkMobileMode() {
-    if ( window.innerWidth < 768) {
+    if (window.innerWidth > 1200) {
+      this.mode = 'desktop'; // enables desktop mode
+      this.toggleOpen = true; // always open
+      this.calcOpacity(); // controls this.bgopacity
+    } else if (window.innerWidth > 768) {
+      this.mode = 'tablet'; // enables tablet mode
+      this.toggleOpen = true; // always open
+      this.calcOpacity(); // controls this.bgopacity
+    } else {
       this.mode = 'mobile'; // enables mobile mode
       this.bgopacity = 0; // no background as default
-      this.collapse = true; // resolves a bug on mobile
-      this.width = '200px'; // width when shown
-    }
-    else if(window.innerWidth < 1200) {
-      this.mode = 'tablet'; // enables tablet mode
-      this.width = '100%'; // max width
-      this.calcOpacity(); // controls this.bgopacity
-    }
-    else {
-      this.mode = 'desktop'; // enables desktop mode
-      this.width = '100%'; // max width
-      this.calcOpacity(); // controls this.bgopacity
+      this.toggleOpen = false; // starts collapsed
     }
   }
   @HostListener('window:scroll', ['$event'])
   calcOpacity() {
-    if (this.mode != 'mobile') {
+    if (this.mode !== 'mobile') {
       // calculates the background opacity
       this.bgopacity = window.pageYOffset / window.innerHeight;
 
@@ -120,13 +117,26 @@ export class NavbarComponent {
       }
     }
   }
+  @HostListener('document:click', ['$event']) // calls function whenever clicked anywhere on screen
+    clickedOutside() {
+      if (this.mode === 'mobile') {
+        if (this.toggleBlocker) {
+          this.toggleOpen = false;
+          this.bgopacity = 0;
+        }
+        if (this.toggleOpen) {
+          this.toggleBlocker = true;
+        }
+      }
+  }
 
   toggleNavbar() {
     // navbar toggle shows only in mobile mode
     if (this.mode === 'mobile') {
-    this.collapse = !this.collapse;
+    this.toggleOpen = !this.toggleOpen;
+    this.toggleBlocker = false;
 
-      if (!this.collapse) {
+      if (this.toggleOpen) {
         this.bgopacity = 1;
       } else {
         this.bgopacity = 0;

@@ -13,6 +13,10 @@
 
         "description":{
             "title": "Presa de ieri cu ochii de azi",
+            "splitTitle" :{
+                "split1" : "Presa de ieri",
+                "split2" : "cu ochii de azi"
+            },
             "text": "Binomul identitate-alteritate în presa brașoveană și sibiană din a doua jumătate a secolului al XIX-lea și începutul secolului al XX-lea"
         },
         

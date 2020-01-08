@@ -1,24 +1,24 @@
-<div id="navbar" *ngIf="this.mode === 'desktop' || this.mode === 'tablet'"
-     [ngStyle]="{'background-color': 'rgba(79,54,34,'+ (bgopacity) +')'}">
+<section id="navbar-{{this.mode}}" [ngStyle]="{'background-color': 'rgba(79,54,34,'+ (bgopacity) +')'}">
+  <button class="toggler fa fa-bars" (click)="toggleNavbar()" type="button" *ngIf="this.mode === 'mobile'"></button>
   <div class="container">
     <div class="row justify-content-center">
-      <img *ngIf="this.mode === 'desktop'" [routerLink]="['/home']" class="logo" src="assets/images/logo.png" alt="Website Logo">
-      <div class="link my-auto">
+      <img *ngIf="this.mode === 'desktop'" [routerLink]="['/home']" [ngx-scroll-to]="'#banner'" class="logo" src="assets/images/logo.png" alt="Website Logo">
+      <div *ngIf="this.toggleOpen === true" class="link my-auto">
         <a [routerLink]="['/home']" [ngx-scroll-to]="'#banner'" routerLinkActive="active-link">{{ 'navbar.home' | translate }}</a>
       </div>
-      <div class="link my-auto">
+      <div *ngIf="this.toggleOpen === true" class="link my-auto">
         <a [routerLink]="['/home']" [ngx-scroll-to]="'#about'">{{ 'navbar.about' | translate }}</a>
       </div>
-      <div class="link my-auto">
+      <div *ngIf="this.toggleOpen === true" class="link my-auto">
         <a [routerLink]="['/home']" [ngx-scroll-to]="'#team'">{{ 'navbar.team' | translate }}</a>
       </div>
-      <div class="link my-auto">
+      <div *ngIf="this.toggleOpen === true" class="link my-auto">
         <a [routerLink]="['/home']" [ngx-scroll-to]="'#raports'">{{ 'navbar.raports' | translate }}</a>
       </div>
-      <div class="link my-auto">
+      <div *ngIf="this.toggleOpen === true" class="link my-auto">
         <a [routerLink]="['/home']" [ngx-scroll-to]="'#media'">{{ 'navbar.media' | translate }}</a>
       </div>
-      <div class="link my-auto">
+      <div *ngIf="this.toggleOpen === true" class="link my-auto">
         <a [routerLink]="['/press']" routerLinkActive="active-link">{{ 'navbar.press' | translate }}</a>
       </div>
       <div class="searchbar my-auto">
@@ -38,4 +38,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

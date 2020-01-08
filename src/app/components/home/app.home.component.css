@@ -101,13 +101,7 @@
   margin: 0 auto;
   padding-top: 20px;
   max-height: 13vw;
-  max-width: 95%;
-}
-
-#about {
-  width: 100%;
-  padding: 55px 150px;
-  background-color: #2B2B2B;
+  max-width: 70%;
 }
 
 h1 {
@@ -117,19 +111,22 @@ h1 {
   margin-bottom: 55px;
 }
 
-#about .data {
+#about {
+  width: 100%;
+  padding: 55px 10%;
+  background-color: #2B2B2B;
+}
+#about .datablock {
   display: inline-block;
   margin-bottom: 20px;
 }
-
-#about .data img {
+#about .datablock img {
   float: left;
   width: 15%;
-  padding-top: 25px;
+  padding-top: 20px;
   padding-right: 30px;
 }
-
-#about .data .txt {
+#about .datablock .txt {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 5px;
   float: right;
@@ -137,64 +134,18 @@ h1 {
   color: white;
   line-height: 1.25;
 }
-
-.data h2 {
-  font-size: 1.8vw;
-}
-.data p {
-  font-size: 1vw;
-  margin-top: 20px;
-}
-
 #about .target {
-  display: inline-block;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
-
-#about .target img {
-  float: left;
-  width: 15%;
-  padding: 20px;
-  padding-right: 50px;
-  padding-top: 45px;
+#about .activities {
+  margin-top: 25px;
 }
-
-#about .target .txt {
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 5px;
-  float: right;
-  width: 85%;
-  color: white;
-  line-height: 1.25;
-}
-
-.target h2 {
+#about .datablock h2 {
   font-size: 1.8vw;
 }
-.target p {
+#about .datablock p {
   font-size: 1vw;
   margin-top: 20px;
-}
-
-#about .activities {
-  display: inline-block;
-}
-
-#about .activities img {
-  float: left;
-  width: 15%;
-  padding: 10px;
-  padding-right: 40px;
-  padding-top: 55px;
-}
-
-#about .activities .txt {
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 5px;
-  float: right;
-  width: 85%;
-  color: white;
-  line-height: 1.25;
 }
 
 .activities h2 {
@@ -325,4 +276,182 @@ h1 {
 }
 #media a:hover {
   color: rgb(255, 187, 0) !important; 
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  #about {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  #about .datablock .txt {
+    margin-top: 0px;
+    width: 82.5%;
+    line-height: 1.25;
+  }
+  #about .target {
+    margin-top: 0px;
+  }
+  #about .activities {
+    margin-top: 15px;
+  }
+  #about .datablock img {
+    width: 17.5%;
+    padding-top: 20px;
+    padding-right: 30px;
+  }
+  #about .datablock p {
+    font-size: 1.2vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+  #about .datablock img {
+    padding-top: 60px;
+  }
+  #about .datablock h2 {
+    font-size: 2.5vw;
+  }
+  #about .datablock p {
+    font-size: 1.5vw;
+  }
+}
+@media screen and (min-width: 569px) and (max-width: 768px) {
+  #about {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #about .datablock .txt {
+    margin: 0;
+    width: 100%;
+    line-height: 1.4;
+  }
+  #about .target {
+    margin-top: 0px;
+  }
+  #about .activities {
+    margin-top: 15px;
+  }
+  #about .datablock img {
+    opacity: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
+  #about .datablock h2 {
+    text-align: center;
+    font-size: 3.1vw;
+    font-weight: bold;
+  }
+  #about .datablock p {
+    font-size: 2vw;
+  }
+
+  #banner .wrapper {
+    width: 80%;
+    top: 38.5%;
+    left: 50%;
+  }
+  #banner .cards img {
+    min-height: 20vh;
+    width: auto;
+  }
+  #banner .description {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  #banner .title {
+    display: block;
+    padding: 0;
+    padding-bottom: 1.7vh;
+    line-height: 1.2;
+    width:  100%;
+    height: auto;
+    
+    font-size: 6.2vw;
+  }
+  #banner .cards {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+  ::ng-deep .ui-card-title{
+    font-size: 16px !important;
+  }
+  ::ng-deep .ui-card-subtitle{
+    font-size: 10px !important;
+  }
+  ::ng-deep .ui-card-content{
+    font-size: 12px !important;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 568px) {
+
+  #about {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #about .datablock .txt {
+    margin: 0;
+    width: 100%;
+    line-height: 1.4;
+  }
+  #about .target {
+    margin-top: 0px;
+  }
+  #about .activities {
+    margin-top: 15px;
+  }
+  #about .datablock img {
+    opacity: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
+  #about .datablock h2 {
+    text-align: center;
+    font-size: 3.5vw;
+    font-weight: bold;
+  }
+  #about .datablock p {
+    font-size: 2.8vw;
+  }
+
+  #banner .wrapper {
+    width: 90%;
+    top: 43%;
+    left: 50%;
+  }
+  #banner .cards img {
+    min-height: 15vh;
+    width: auto;
+  }
+  #banner .description {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  #banner .title {
+    display: block;
+    padding: 0;
+    padding-bottom: 3vh;
+    line-height: 1.3;
+    width:  100%;
+    height: auto;
+    
+    font-size: 8.8vw;
+  }
+  #banner .cards {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+  ::ng-deep .ui-card-title{
+    font-size: 16px !important;
+  }
+  ::ng-deep .ui-card-subtitle{
+    font-size: 10px !important;
+  }
+  ::ng-deep .ui-card-content{
+    font-size: 12px !important;
+  }
 }
