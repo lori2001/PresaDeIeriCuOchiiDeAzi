@@ -86,11 +86,11 @@ export class NavbarComponent {
 
   @HostListener('window:resize', ['$event'])
   checkMobileMode() {
-    if (window.innerWidth > 1200) {
+    if (window.innerWidth >= 1200) {
       this.mode = 'desktop'; // enables desktop mode
       this.toggleOpen = true; // always open
       this.calcOpacity(); // controls this.bgopacity
-    } else if (window.innerWidth > 768) {
+    } else if (window.innerWidth >= 768) {
       this.mode = 'tablet'; // enables tablet mode
       this.toggleOpen = true; // always open
       this.calcOpacity(); // controls this.bgopacity

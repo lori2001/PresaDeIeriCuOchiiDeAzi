@@ -29,7 +29,6 @@
   cursor:pointer;
 }
 
-
 .content .text {
   float: left;
   margin-top: 17px;
@@ -37,4 +36,39 @@
   font-size: 1.2rem;
   font-family: "Cabin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: bold;
+}
+
+@media screen and (min-width: 476px) and (max-width: 768px) {
+  .content .text {
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+  .content a {
+    margin-right: 20px;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 351px) and (max-width: 475px) {
+  .content .text {
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: 0.8rem;
+  }
+  .content a {
+    margin-top: 20px;
+    margin-right: 15px;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 350px) {
+  .content .text {
+    margin-top: 22px;
+    margin-left: 10px;
+    font-size: 0.65rem;
+  }
+  .content a {
+    margin-top: 22px;
+    margin-right: 10px;
+    font-size: 0.65rem;
+  }
 }

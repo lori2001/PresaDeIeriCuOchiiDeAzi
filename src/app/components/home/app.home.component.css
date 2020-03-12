@@ -162,6 +162,8 @@ h1 {
 }
 
 #team h2 {
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -186,10 +188,11 @@ h1 {
 }
 
 #team .item h5 {
+  width: 90%;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 
-  font-size: 1.25vw;
+  font-size: 1.10vw;
   white-space: nowrap;
   background-color: rgb(79, 54, 34) !important;
 
@@ -197,21 +200,28 @@ h1 {
 
   position: absolute;
   bottom: 6px;
-  left: 15px;
-  right: 15px;
+  left: 5%;
+  right: 5%;
 }
 
 #raports {
   text-align: center;
-  padding: 0 200px;
-  padding-top: 55px;
-  padding-bottom: 30px;
-
   width: 100%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+#raports .h1 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #raports .container {
   text-align: center;  
+  margin-top: 35px;
+  padding: 0 200px;
+  width: 100%;
 }
 
 #raports .col {
@@ -278,7 +288,7 @@ h1 {
   color: rgb(255, 187, 0) !important; 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   #about {
     padding-left: 8%;
     padding-right: 8%;
@@ -302,19 +312,58 @@ h1 {
   #about .datablock p {
     font-size: 1.2vw;
   }
+  @media screen and (min-width: 768px) and (max-width: 1000px)
+  {
+    #media {
+      padding: 55px 100px;
+    }
+    #raports .container {
+      padding: 0 100px;
+    }
+    #team {
+      width: 100%;
+      padding: 55px 75px;
+    }
+    #team .item h5 {
+      font-size: 1.2vw;
+    }
+    #about .datablock img {
+      padding-top: 60px;
+    }
+    #about .datablock h2 {
+      font-size: 2.5vw;
+    }
+    #about .datablock p {
+      font-size: 1.5vw;
+    }
+  }
 }
-@media screen and (min-width: 769px) and (max-width: 1000px) {
-  #about .datablock img {
-    padding-top: 60px;
+@media screen and (min-width: 569px) and (max-width: 767px) {
+  #media {
+    padding: 35px 50px;
   }
-  #about .datablock h2 {
-    font-size: 2.5vw;
+  #media a {
+    font-size: 2.25vw;
   }
-  #about .datablock p {
+  #raports .container {
+    padding: 0 70px;
+  }
+  #raports h5 {
+    font-size: 2.15vw;
+  }
+  #raports img {
+    width: 75%;
+  }
+  #team {
+    width: 100%;
+    padding: 55px 60px;
+  }
+  #team h1 {
+    margin-bottom: 35px;
+  }
+  #team .item h5 {
     font-size: 1.5vw;
   }
-}
-@media screen and (min-width: 569px) and (max-width: 768px) {
   #about {
     padding-left: 10%;
     padding-right: 10%;
@@ -385,7 +434,51 @@ h1 {
   }
 }
 @media screen and (min-width: 0px) and (max-width: 568px) {
-
+  #media {
+    padding: 35px 25px;
+  }
+  #media a {
+    font-size: 2.45vw;
+  }
+  @media screen and (min-width: 0px) and (max-width: 374px) {
+    #media a {
+      font-size: 3.2vw;
+    } 
+  }
+  #media .col {
+    padding: 0 7.5px;
+  }
+  #media .row {
+    padding-bottom: 20px;
+  }
+  #raports .container {
+    padding: 0 30px;
+  }
+  #raports h5 {
+    font-size: 2.55vw;
+  }
+  #raports img {
+    width: 80%;
+  }
+  #team {
+    width: 100%;
+    padding: 55px 35px;
+  }
+  @media screen and (min-width: 350px) and (max-width: 568px) {
+    #team .item h5 {
+      font-size: 2.2vw;
+    }
+  }
+  @media screen and (min-width: 296px) and (max-width: 349px) {
+    #team .item h5 {
+      font-size: 5vw;
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 295px) {
+    #team .item h5 {
+      font-size: 4.5vw;
+    }
+  }
   #about {
     padding-left: 10%;
     padding-right: 10%;

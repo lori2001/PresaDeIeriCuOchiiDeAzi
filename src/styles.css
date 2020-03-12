@@ -96,6 +96,26 @@ html {
     width: 13vw;
   }
 
+  
+  /*Change ugly scroll color annd shape on firefox*/
+  html {
+    --scrollbarBG: rgba(51, 51, 51);
+    --thumbBG: #6e6e70;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
+
   @media screen and (min-width: 1001px) and (max-width: 1200px) {
     .finance p {
       font-size: 0.85vw;

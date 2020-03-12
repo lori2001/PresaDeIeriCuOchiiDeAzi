@@ -49,14 +49,18 @@ export class HomeComponent implements OnInit {
       responsiveClass: true,
       responsive: {
           0: {
-              items: 1,
-              dots: false
+            items: 1,
+            dots: false
           },
-          576: {
-              items: 3
+          350: {
+            items: 2,
+            dots: false
+          },
+          569: {
+            items: 3
           },
           768: {
-              items: 4
+            items: 4
           }
       }
     };
