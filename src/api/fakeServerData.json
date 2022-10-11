@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Brass\u00f3 1885-1894",
+      "href": "../../../assets/doc/news/Brass\u00f3 1885-1894;bv;hu/Brass\u00f31885/001;1885.02.17;0;A magyar allam es anemzetisegek.jpg",
+      "description": "A magyar allam es anemzetisegek",
+      "category": "bv",
+      "language": "hu",
+      "noDay": false,
+      "noMonth": false,
+      "page": 0,
+      "num": 1,
+      "publish_date": "1885-02-17",
+      "keywords": " "
+    },
+    {
+      "id": 2,
+      "name": "Brass\u00f3 1885-1894",
+      "href": "../../../assets/doc/news/Brass\u00f3 1885-1894;bv;hu/Brass\u00f31885/100;1885.02.17;0;Az erdelyi szaszok magyarositasa.jpg",
+      "description": "Az erdelyi szaszok magyarositasa",
+      "category": "bv",
+      "language": "hu",
+      "noDay": false,
+      "noMonth": false,
+      "page": 0,
+      "num": 100,
+      "publish_date": "1885-02-17",
+      "keywords": " "
+    }
+  ]
+}
