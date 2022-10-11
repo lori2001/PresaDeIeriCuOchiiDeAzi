@@ -1,249 +1,323 @@
 <app-navbar></app-navbar>
 <section id="home">
-    <div id="banner">
-        <img class="bg" src="../../../assets/images/books.jpg" alt="Background Books">
+  <div id="banner">
+    <img
+      class="bg"
+      src="../../../assets/images/books.jpg"
+      alt="Background Books"
+    />
 
-        <div class="wrapper">
-            <div class="description">{{ 'home.description.text' | translate}}</div>
-            <div *ngIf="this.mode !== 'mobile'" class="title">{{ 'home.description.title' | translate}}</div>
-            <div *ngIf="this.mode === 'mobile'" class="title">
-                {{ 'home.description.splitTitle.split1' | translate}}<br>
-                {{ 'home.description.splitTitle.split2' | translate}}
+    <div class="wrapper">
+      <div class="description">{{ "home.description.text" | translate }}</div>
+      <div *ngIf="this.mode !== 'mobile'" class="title">
+        {{ "home.description.title" | translate }}
+      </div>
+      <div *ngIf="this.mode === 'mobile'" class="title">
+        {{ "home.description.splitTitle.split1" | translate }}<br />
+        {{ "home.description.splitTitle.split2" | translate }}
+      </div>
+      <div class="cards">
+        <owl-carousel
+          [options]="newsSliderOPT"
+          [items]="filteredNewsGroup"
+          [carouselClasses]="['owl-theme']"
+        >
+          <div class="item" *ngFor="let element of filteredNewsGroup">
+            <div class="news">
+              <a href="{{ element.href }}">
+                <p-card
+                  header="{{ element.name }}"
+                  subheader="{{ element.publish_date }}"
+                  [style]="{
+                    width: '100%',
+                    color: 'white',
+                    background: 'rgba(79,54,34,0.8)'
+                  }"
+                  class="card-style"
+                  styleClass="ui-card-shadow"
+                >
+                  <p-header>
+                    <img
+                      [src]="'./assets/images/antete/' + element.name + '.jpg'"
+                    />
+                  </p-header>
+                  <p>{{ element.description }}</p>
+                </p-card>
+              </a>
             </div>
-            <div class="cards">
-                <owl-carousel
-                    [options]="newsSliderOPT"
-                    [items]="filteredNewsGroup"
-                    [carouselClasses]="['owl-theme']">
-                    <div class="item" *ngFor="let element of filteredNewsGroup">
-                        <div class="news">
-                            <a href="{{element.href}}" >
-                                <p-card header="{{element.name}}" subheader="{{element.publish_date}}"
-                                [style]="{width: '100%', 'color':'white', 'background':'rgba(79,54,34,0.8)'}"
-                                class="card-style" styleClass="ui-card-shadow">
-                                    <p-header>
-                                        <img src="{{'../../../assets/images/antete/' + element.name + '.jpg'}}">
-                                    </p-header>
-                                    <p>{{element.description}}</p>
-                                </p-card>
-                            </a>
-                        </div>
-                    </div>
-                </owl-carousel>
-            </div>
-        </div>
- 
-        <div class="finance">
-            <p>{{ 'finance.description' | translate}}</p>
-            <div class="icon">
-                <img src="../../../assets/images/afcn.jpg" alt="AFCN Logo">
-            </div>
-        </div>
-
-        <div class="sponsors">
-            <img src="../../../assets/images/brassoi-lapok.jpg" alt="Brassoi Lapok Logo">
-        </div>
+          </div>
+        </owl-carousel>
+      </div>
     </div>
 
-    <div id="about">
-        <h1 style="color:white;">{{ 'home.about.title' | translate}}</h1>
-        
-        <div class="datablock">
-            <img src="../../../assets/images/data.png" alt="Project Data">
-            <div class="txt">
-                <h2>{{ 'home.about.data.title' | translate}}</h2>
-                <p>{{ 'home.about.data.text' | translate}}</p>
-            </div>
-        </div>
-
-        <div class="datablock">
-            <img src="../../../assets/images/target.png" class="target" alt="Project Target">
-            <div class="txt">
-                <h2>{{ 'home.about.target.title' | translate}}</h2>
-                <p>{{ 'home.about.target.text' | translate}}</p>
-            </div>
-        </div>
-
-        <div class="datablock">
-            <img src="../../../assets/images/typewriter.png" class="activities" alt="Activities">
-            <div class="txt">
-                <h2>{{ 'home.about.activities.title' | translate}}</h2>
-                <p>{{ 'home.about.activities.text' | translate}}</p>
-            </div>
-        </div>
+    <div class="finance">
+      <p>{{ "finance.description" | translate }}</p>
+      <div class="icon">
+        <img src="../../../assets/images/afcn.jpg" alt="AFCN Logo" />
+      </div>
     </div>
 
-  <div id="team" style="background-color: rgb(25, 25, 25);">
-        <h1 style="color:white;">{{ 'home.team.title' | translate}}</h1>
+    <div class="sponsors">
+      <img
+        src="../../../assets/images/brassoi-lapok.jpg"
+        alt="Brassoi Lapok Logo"
+      />
+    </div>
+  </div>
 
+  <div id="about">
+    <h1 style="color: white">{{ "home.about.title" | translate }}</h1>
 
-        <div class="wrapper">
-            <owl-carousel
-                [options]="teamSliderOPT"
-                [items]="team"
-                [carouselClasses]="['owl-theme']">
-                <div class="item" *ngFor="let element of team">
-                    <a href="../../../assets/doc/cv/{{element}}.pdf">
-                        <img src="../../../assets/images/team/{{element}}.jpg">
-                        <h5>{{ 'home.team.'+ element +'.name' | translate}}</h5>
-                    </a>
-                </div>
-            </owl-carousel>
-        </div>
+    <div class="datablock">
+      <img src="../../../assets/images/data.png" alt="Project Data" />
+      <div class="txt">
+        <h2>{{ "home.about.data.title" | translate }}</h2>
+        <p>{{ "home.about.data.text" | translate }}</p>
+      </div>
     </div>
 
-    <div id="raports">
-        <h1 style="color:white;">{{ 'home.raports.title' | translate}}</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <a href="../../../assets/doc/raports/Cercetare presa brașoveană.docm">
-                        <img src="../../../assets/images/word.png" alt="Word Icon PNG">
-                        <h5>{{ 'home.raports.press-bv' | translate}}</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/raports/Cercetare presa sibiană.docx">
-                        <img src="../../../assets/images/word.png" alt="Word Icon PNG">
-                        <h5>{{ 'home.raports.press-sb' | translate}}</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/raports/Raport de cercetare presa germană.doc">
-                        <img src="../../../assets/images/word.png" alt="Word Icon PNG">
-                        <h5>{{ 'home.raports.press-de1' | translate}}</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/raports/Raport de cercetare presa germană 2.doc">
-                        <img src="../../../assets/images/word.png" alt="Word Icon PNG">
-                        <h5>{{ 'home.raports.press-de1' | translate}}</h5>
-                    </a>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 20px">
-                <div class="col">
-                    <a href="../../../assets/doc/raports/Lista articole cercetate.xlsx">
-                        <img src="../../../assets/images/excel.png" alt="Excel Icon PNG">
-                        <h5>{{ 'home.raports.list' | translate}}</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/raports/Imaginarul ident alterit.doc">
-                        <img src="../../../assets/images/word.png" alt="Word Icon PNG">
-                        <h5>{{ 'home.raports.imaginarul' | translate}}</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/raports/Ieri si azi, românii despre sași.doc">
-                        <img src="../../../assets/images/word.png" alt="Word Icon PNG">
-                        <h5>{{ 'home.raports.then-now' | translate}}</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/raports/Catalogul presei româno-maghiaro-germane.doc">
-                        <img src="../../../assets/images/word.png" alt="Word Icon PNG">
-                        <h5>{{ 'home.raports.press-catalog' | translate}}</h5>
-                    </a>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 20px">
-                <div class="col">
-                    <a href="../../../assets/doc/raports/plakat A3 javitott.doc">
-                        <img src="../../../assets/images/word.png" alt="Word Icon PNG">
-                        <h5>{{ 'home.raports.a3' | translate}}</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/raports/plakat A4 javitott.doc">
-                        <img src="../../../assets/images/word.png" alt="Word Icon PNG">
-                        <h5>{{ 'home.raports.a4' | translate}}</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/raports/Kiadvany A4 javitott.pdf" download="Kiadvany A4 javitott.pdf">
-                        <img src="../../../assets/images/pdf.png" alt="Pdf Icon PNG">
-                        <h5>{{ 'home.raports.a4release' | translate}}</h5>
-                    </a>
-                </div>
-                <div class="col"></div>
-            </div>
-        </div>
-    </div>
-    
-
-    <div id="media" style="background-color: rgb(25, 25, 25);"> 
-        <h1 style="color:white;">{{ 'home.media.title' | translate}}</h1>
-
-        <div class="container videos">
-            <div class="row">
-                <div class="col">
-                    <video width="100%" height="auto" controls poster="../../../assets/videos/MS1.jpg">
-                        <source src="../../../assets/videos/MS1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video> 
-                </div>
-                <div class="col">
-                    <video width="100%" height="auto" controls poster="../../../assets/videos/MS2.jpg">
-                        <source src="../../../assets/videos/MS2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video> 
-                </div>
-            </div>
-        </div>
-        
-        <div class="container text">
-            <div class="row">
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 34.pdf">Brassói Lapok 34</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 37.pdf">Brassói Lapok 37</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 38.pdf">Brassói Lapok 38</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 39.pdf">Brassói Lapok 39</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 40.pdf">Brassói Lapok 40</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 41.pdf">Brassói Lapok 41</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 42.pdf">Brassói Lapok 42</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 43.pdf">Brassói Lapok 43</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 44.pdf">Brassói Lapok 44</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 45.pdf">Brassói Lapok 45</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="../../../assets/doc/media/Brassói Lapok 46.pdf">Brassói Lapok 46</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Monitorul Expres 4377.pdf">Monitorul Expres 4377</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Monitorul Expres 4378.pdf">Monitorul Expres 4378</a>
-                </div>
-                <div class="col">
-                    <a href="../../../assets/doc/media/Monitorul Expres 4380.pdf">Monitorul Expres 4380</a>
-                </div>
-            </div>
-        </div>
+    <div class="datablock">
+      <img
+        src="../../../assets/images/target.png"
+        class="target"
+        alt="Project Target"
+      />
+      <div class="txt">
+        <h2>{{ "home.about.target.title" | translate }}</h2>
+        <p>{{ "home.about.target.text" | translate }}</p>
+      </div>
     </div>
 
+    <div class="datablock">
+      <img
+        src="../../../assets/images/typewriter.png"
+        class="activities"
+        alt="Activities"
+      />
+      <div class="txt">
+        <h2>{{ "home.about.activities.title" | translate }}</h2>
+        <p>{{ "home.about.activities.text" | translate }}</p>
+      </div>
+    </div>
+  </div>
 
+  <div id="team" style="background-color: rgb(25, 25, 25)">
+    <h1 style="color: white">{{ "home.team.title" | translate }}</h1>
+
+    <div class="wrapper">
+      <owl-carousel
+        [options]="teamSliderOPT"
+        [items]="team"
+        [carouselClasses]="['owl-theme']"
+      >
+        <div class="item" *ngFor="let element of team">
+          <a href="../../../assets/doc/cv/{{ element }}.pdf">
+            <img src="../../../assets/images/team/{{ element }}.jpg" />
+            <h5>{{ "home.team." + element + ".name" | translate }}</h5>
+          </a>
+        </div>
+      </owl-carousel>
+    </div>
+  </div>
+
+  <div id="raports">
+    <h1 style="color: white">{{ "home.raports.title" | translate }}</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a href="../../../assets/doc/raports/Cercetare presa brașoveană.docm">
+            <img src="../../../assets/images/word.png" alt="Word Icon PNG" />
+            <h5>{{ "home.raports.press-bv" | translate }}</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/raports/Cercetare presa sibiană.docx">
+            <img src="../../../assets/images/word.png" alt="Word Icon PNG" />
+            <h5>{{ "home.raports.press-sb" | translate }}</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="../../../assets/doc/raports/Raport de cercetare presa germană.doc"
+          >
+            <img src="../../../assets/images/word.png" alt="Word Icon PNG" />
+            <h5>{{ "home.raports.press-de1" | translate }}</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="../../../assets/doc/raports/Raport de cercetare presa germană 2.doc"
+          >
+            <img src="../../../assets/images/word.png" alt="Word Icon PNG" />
+            <h5>{{ "home.raports.press-de1" | translate }}</h5>
+          </a>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <div class="col">
+          <a href="../../../assets/doc/raports/Lista articole cercetate.xlsx">
+            <img src="../../../assets/images/excel.png" alt="Excel Icon PNG" />
+            <h5>{{ "home.raports.list" | translate }}</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/raports/Imaginarul ident alterit.doc">
+            <img src="../../../assets/images/word.png" alt="Word Icon PNG" />
+            <h5>{{ "home.raports.imaginarul" | translate }}</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="../../../assets/doc/raports/Ieri si azi, românii despre sași.doc"
+          >
+            <img src="../../../assets/images/word.png" alt="Word Icon PNG" />
+            <h5>{{ "home.raports.then-now" | translate }}</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="../../../assets/doc/raports/Catalogul presei româno-maghiaro-germane.doc"
+          >
+            <img src="../../../assets/images/word.png" alt="Word Icon PNG" />
+            <h5>{{ "home.raports.press-catalog" | translate }}</h5>
+          </a>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <div class="col">
+          <a href="../../../assets/doc/raports/plakat A3 javitott.doc">
+            <img src="../../../assets/images/word.png" alt="Word Icon PNG" />
+            <h5>{{ "home.raports.a3" | translate }}</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/raports/plakat A4 javitott.doc">
+            <img src="../../../assets/images/word.png" alt="Word Icon PNG" />
+            <h5>{{ "home.raports.a4" | translate }}</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="../../../assets/doc/raports/Kiadvany A4 javitott.pdf"
+            download="Kiadvany A4 javitott.pdf"
+          >
+            <img src="../../../assets/images/pdf.png" alt="Pdf Icon PNG" />
+            <h5>{{ "home.raports.a4release" | translate }}</h5>
+          </a>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="media" style="background-color: rgb(25, 25, 25)">
+    <h1 style="color: white">{{ "home.media.title" | translate }}</h1>
+
+    <div class="container videos">
+      <div class="row">
+        <div class="col">
+          <video
+            width="100%"
+            height="auto"
+            controls
+            poster="../../../assets/videos/MS1.jpg"
+          >
+            <source src="../../../assets/videos/MS1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col">
+          <video
+            width="100%"
+            height="auto"
+            controls
+            poster="../../../assets/videos/MS2.jpg"
+          >
+            <source src="../../../assets/videos/MS2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text">
+      <div class="row">
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 34.pdf"
+            >Brassói Lapok 34</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 37.pdf"
+            >Brassói Lapok 37</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 38.pdf"
+            >Brassói Lapok 38</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 39.pdf"
+            >Brassói Lapok 39</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 40.pdf"
+            >Brassói Lapok 40</a
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 41.pdf"
+            >Brassói Lapok 41</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 42.pdf"
+            >Brassói Lapok 42</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 43.pdf"
+            >Brassói Lapok 43</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 44.pdf"
+            >Brassói Lapok 44</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 45.pdf"
+            >Brassói Lapok 45</a
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="../../../assets/doc/media/Brassói Lapok 46.pdf"
+            >Brassói Lapok 46</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Monitorul Expres 4377.pdf"
+            >Monitorul Expres 4377</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Monitorul Expres 4378.pdf"
+            >Monitorul Expres 4378</a
+          >
+        </div>
+        <div class="col">
+          <a href="../../../assets/doc/media/Monitorul Expres 4380.pdf"
+            >Monitorul Expres 4380</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <app-footer></app-footer>
